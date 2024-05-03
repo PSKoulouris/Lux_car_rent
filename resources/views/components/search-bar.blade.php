@@ -1,14 +1,32 @@
-
-   <div class="max-w-auto">
-  
+{{-- need more thing like, position, style, drop-list --}}
+   
+   <div class="w-[1200px]"> 
     <form action="#">
+        @csrf
         <div class="flex flex-row items-center justify-center">
-            <div class="relative">
-            <div class="absolute">
-                <svg class="w-20 h-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+            {{-- <div class="relative">
+                <div class="absolute bottom-0 left-0">
+                    </div> --}}
+                {{-- <input type="text" placeholder="Destiantion ... "> --}}
+            {{-- </div> --}}
+            <div class="w-[20%]">
+                {{--   --}}
+                <select class="px-5" name="destination" id="destination-option">
+                    {{-- better doing with js --}}
+                    {{-- <option value="empty"></option> --}}
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Clervaux">Clervaux</option>
+                    <option value="Wiltz">Wiltz</option>
+                    <option value="Diekirch">Diekirch</option>
+                    <option value="Redange">Redange</option>
+                    <option value="Mersch">Mersch</option>
+                    <option value="Echternach">Echternach</option>
+                    <option value="Capellen">Capellen</option>
+                    <option value="Grevenmacher">Grevenmacher</option>
+                    <option value="Esch">Esch</option>
+                    <option value="Remich">Remich</option>
+                </select>
             </div>
-            <input type="text" placeholder="Destiantion ... ">
-        </div>
             <input type="date" name="date">
             <input type="time" name="time">
 
