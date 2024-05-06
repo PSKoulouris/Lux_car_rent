@@ -7,6 +7,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+Route::get('/view', function () {
+    return view('carviewpage');
+})->name('carviewpage');
+
+
 Route::get('/about', function () {
     return view('aboutus');
 });
