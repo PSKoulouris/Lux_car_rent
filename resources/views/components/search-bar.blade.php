@@ -43,7 +43,7 @@
 
             
                       <div class="mr-2  flex flex-col gap-1">
-                         <label for="pick-up-location" class="text-white font-small">Pick-up-Location</label>
+                         <label for="location" class="text-white font-small">Pick-up-Location</label>
                          <select name="location" id="location" class="bg-transparent rounded-xl text-white w-[200px] h-[43px]">
                             <option value="">Select Your Location</option>
 
@@ -71,7 +71,7 @@
                         </div>
                         <div class="mr-2 flex flex-col gap-1">
                             <label for="submit">Let search</label>
-                            <button type="submit" class="text-white  w-[120px] text-center border-2 h-[40px] rounded-xl">Search</button>
+                            <button type="submit"  id="submit"class="text-white  w-[120px] text-center border-2 h-[40px] rounded-xl">Search</button>
                         </div>
 
             </form>
