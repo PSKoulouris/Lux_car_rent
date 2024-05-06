@@ -1,7 +1,14 @@
 <?php
 
+use App\Http\Controllers\CarsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+
+// route for adminTest.blade.php
+Route::get('/showAdmin', function(){
+    return view('adminTest');
+});
+Route::post('/createDataAdmin', [CarsController::class,'createNewData'])->name('createCars');
 
 Route::get('/', function () {
     return view('welcome');
