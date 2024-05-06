@@ -3,7 +3,7 @@
          <div class="flex-col">
           <!-- first div for background image and link to home page -->
          <div class="relative" >
-          <img src="{{ url('images/dark8.webp') }}" alt="" class="bg-cover w-full h-[800px] ">
+          <img src="{{ url('images/img7.jpg') }}" alt="" class="bg-cover w-full h-[800px] ">
           <a href="{{ route('welcome') }}" class="font-bold text-black pt-1 text-center absolute right-3.5 top-1.5 border-none w-[100px] h-[30px] bg-orange-500 rounded-xl ">Home</a>
           <p class="font-bold text-orange-500 text-5xl absolute top-[40%] right-[45%]"><i>Lux Rent</i></p>
           <p class="font-bold text-orange-500 text-2xl absolute top-[55%] right-[35%]"><i>Start your driving experience with us! To enjoy your Trip!</i></p>

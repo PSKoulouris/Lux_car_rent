@@ -19,6 +19,9 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/booking', function () {
+    return view('bookingpage');
+});
  
 Route::get('/dashboard', function () {
     return view('dashboard');
