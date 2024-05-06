@@ -37,25 +37,36 @@
             <p class="text-2xl font-bold text-orange-500">Search For Your Car</p>
         </div>
     </div>
-        <div class="flex gap-4 mt-5 absolute top-[30%] right-[30%]">
+        <div class="flex gap-4 mt-5 absolute top-[30%] right-[25%]">
           <form action="#" method="get" class="flex"> 
             
 
             
                       <div class="mr-2  flex flex-col gap-1">
                          <label for="pick-up-location" class="text-white font-small">Pick-up-Location</label>
-                        <input type="text" id="pick-up-location" name="pickup-location"class="bg-transparent rounded-xl text-white" placeholder="enter your location" >
+                         <select name="location" id="location" class="bg-transparent rounded-xl text-white w-[200px] h-[43px]">
+                            <option value="">Select Your Location</option>
+
+                            <option value="clervaux" class=" text-black">clervaux</option>
+                            <option value="diekirch" class="text-black">Diekirch</option>
+                            <option value="luxembourg" class="text-black">Luxembourg</option>
+                            <option value="esch-sur-alzette" class="text-black">Esch-Sur-Alzette</option>
+                            <option value="airport" class="text-black">Luxembourg-Airport</option>
+                        
+                         </select>
+
+                        <!-- <input type="text" id="pick-up-location" name="pickup-location"class="bg-transparent rounded-xl text-white" placeholder="enter your location" > -->
 
 
                        </div>
                        <div class="mr-2 flex flex-col gap-1">
                         <label for="start-date" class="text-white font-small">Select Your Start Date</label>
-                        <input type="date" name="start-date" id="start-date" class="bg-transparent rounded-xl text-white " placeholder="Select your start date" >
+                        <input type="datetime-local" name="start-date" value="" id="start-date" class="bg-transparent rounded-xl text-white " placeholder="Select your start date" >
             
                          </div>
                          <div class="mr-2 flex flex-col gap-1">
                          <label for="end-date" class="text-white font-small">Select Your end Date</label>
-                       <input type="date" name="end-date" id="end-date" class="bg-transparent rounded-xl text-white " placeholder="Select your end date">
+                       <input type="datetime-local" name="end-date" value=""    id="end-date" class="bg-transparent rounded-xl text-white " placeholder="Select your end date">
            
                         </div>
                         <div class="mr-2 flex flex-col gap-1">
