@@ -2,6 +2,7 @@
    <div class="max-w-auto">
   
     <form action="#">
+        @csrf
         <div class="flex flex-row items-center justify-center">
             <div class="relative">
             <div class="absolute">
