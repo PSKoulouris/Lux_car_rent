@@ -1,10 +1,13 @@
 
 
 <x-mainlayout>
-    <x-nav-link-us>
-</x-nav-link-us>
+    <x-nav-picture class="relative">
+</x-nav-picture>
 
+<div class="absolute top-[33%] right-[13%]">
+    <p class="text-orange-500 font-bold text-5xl text-center"> please fill the contact form below! we will reach you soon.</p>
 
+</div>
 <div class="flex-col mt-8 p-4 mx-auto bg-white shadow-md w-[70%] gap-4 rounded-xl">
         <div class="flex-col p-4 mx-auto w-[90%] gap-2 rounded-sm shadow-md ">
              <div><h5 class="inline-flex items-center mb-6 text-base font-semibold text-gray-500 g-2  uppercase "><svg class="w-4 h-4 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
@@ -28,16 +31,16 @@
                  <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-100 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
                </div>
                <div class="mb-6">
-               <button type="submit" class="rounded-xl border border-gray-300 text-lg font-bold w-full h-[50px] bg-gray-100">Send message</button>
+               <button type="submit" class="bg-blue-500 rounded-xl border border-gray-300 text-lg font-bold w-full h-[50px]">Send message</button>
                </div>
                </form>
         </div>
         <div>
                 <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                 <a href="#" class="hover:underline">info@company.com</a>
+                 <a href="#" class="hover:underline">infoluxrent@gmail.com</a>
                 </p>
                  <p class="text-sm text-gray-500 dark:text-gray-400">
-                 <a href="#" class="hover:underline">212-456-7890</a>
+                 <a href="#" class="hover:underline">352-000-000-000</a>
                  </p>
         </div>
     </div>
