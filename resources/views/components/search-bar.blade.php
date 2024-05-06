@@ -24,7 +24,8 @@
 </div> --> 
 <div class="relative">
     <!-- created a image as background -->
-    <img src="{{ url('images/img7.jpg') }}" class="bg-cover" alt="">
+    <!--Philippe: changed image/img7.jpg by updated main picture image/MainCar_WelcomePage_fin.jpg -->
+    <img src="{{ url('images/MainCar_WelcomePage_fin.jpg') }}" class="bg-cover" alt="">
     <!-- creating div to have text above the image -->
      <div class="flex flex-col gap-2 justify-center items-center absolute top-[10%] right-[33%]">
         <p class="text-2xl font-bold text-white">Attracting Discounts just for you</p>
