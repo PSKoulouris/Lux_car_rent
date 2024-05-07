@@ -12,6 +12,9 @@ Route::post('/createDataAdmin', [CarsController::class,'createNewData'])->name('
 // show cars for car view
 Route::get('/showCars', [CarsController::class, 'showCars'])->name('showcars');
 
+// // on click of the button car view goes in the booking page
+// Route::get('showBooking/{$id}', [CarsController::class, 'showBookingCard'])->name('search');
+
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
