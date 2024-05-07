@@ -20,15 +20,16 @@ class CarsController extends Controller
             // begin
             DB::beginTransaction();
             //creating new data for Cars table
+            // upload image in database
             $request->validate([
-                'file' => 'required|file',
+                'nameCar' => 'required',
+                'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             ]);
-            $file = $request->file('file');
-            $path = $file->store('public/images');
-            Cars::create(['name' => $file->getClientOriginalName(),
-            'image' => $path]);
+            $imageName = time().'.'.$request->image->extension();
+            $request->image->move(public_path('images'), $imageName);
+            // Log::info('Image Path: ' . public_path('images') . '/' . $imageName);
             $newCar = new Cars;
-            // $newCar->image = $request->image;
+            $newCar->image = 'images/'.$imageName;
             $newCar->name = $request->nameCar;
             $newCar->model = $request->modelCar;
             $newCar->year = $request->yearCar;
@@ -54,7 +55,7 @@ class CarsController extends Controller
 
             //commit
             DB::commit();
-            return redirect('/showAdmin')->with('Success!!!');
+            return redirect('/showAdmin')->with('Success!!!', 'New record inserted');
         } catch (Exception $e) {
             DB::rollBack();
             Log::error("Error" . $e->getMessage());
