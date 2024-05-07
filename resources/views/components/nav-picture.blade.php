@@ -1,7 +1,7 @@
 <x-nav-link-us>
 </x-nav-link-us>
 <div>
-    <!-- Philippe: replace picture img7.jpg by updated MainCar_multiplepages_fin_2.jpg 
-change with new image tomorrow-->
-    <img src="{{ url('images/MainCar_multiplepages_fin.jpg')}}" alt="" class="w-full h-[500px]">
+    <!-- Philippe: replace picture img7.jpg by updated MainCar_multiplepages_fin_550.jpg/
+                Deleted class=h-500px and added h-auto to maintain image structure in different browser windows-->
+    <img src="{{ url('images/MainCar_multiplepages_fin_550px.jpg')}}" alt="" class="w-full h-auto">
 </div>
