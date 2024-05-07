@@ -62,4 +62,10 @@ class CarsController extends Controller
             return back()->withError('Error during while saving the data');
         }
     }
+    public function showCars () {
+        $listCars = Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')->select('cars.name', 'cars.model', 'cars.weekly_rate','cars_types.nbr_places','cars_types.nbr_doors')->get();
+        Log::info($listCars);
+        return view('carviewpage', ['listCars' => $listCars]);
+
+    }
 }
