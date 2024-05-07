@@ -39,7 +39,7 @@
         </div>
     </div>
         <div class="flex gap-4 mt-5 absolute top-[30%] right-[25%]">
-          <form action="#" method="get" class="flex"> 
+          <form action="{{ route('showcars') }}" method="get" class="flex"> 
             
 
             

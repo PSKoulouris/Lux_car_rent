@@ -1,4 +1,5 @@
 <x-mainlayout>
-    <x-nav-link-us>
-</x-nav-link-us>
+    <x-nav-picture class="relative">
+</x-nav-picture>
+<x-bookingview/>
 </x-mainlayout>
