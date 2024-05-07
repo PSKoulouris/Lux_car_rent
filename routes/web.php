@@ -8,9 +8,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/showAdmin', function(){
     return view('adminTest');
 });
+
 Route::post('/createDataAdmin', [CarsController::class,'createNewData'])->name('createCars');
 // show cars for car view
 Route::get('/showCars', [CarsController::class, 'showCars'])->name('showcars');
+
 
 Route::get('/', function () {
     return view('welcome');
