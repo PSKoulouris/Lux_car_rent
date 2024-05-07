@@ -63,8 +63,10 @@
     </form>
 
   </div>
-  <div class="w-[70%] mx-auto rounded-lg  bg-white mt-5 pt-4">
-    <x-car-view/>
+  <div class="w-[70%] mx-auto rounded-lg flex flex-wrap gap-4 bg-white mt-5 pt-4">
+    @foreach ($listCars as $car)
+    <x-car-view :image="$car['image']" :nameCar="$car['name']"/>
+    @endforeach
   </div>
 </div>
  
