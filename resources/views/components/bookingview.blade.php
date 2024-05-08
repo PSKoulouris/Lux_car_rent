@@ -22,10 +22,14 @@
         Booking Details
     </div>
      <div class="flex gap-8 mt-2 mx-auto">
-        <div class="w-[300px] h-[250px] bg-gray-100 p-4">
+        <div class="w-[300px] h-[250px] flex flex-col bg-gray-100 p-4">
             <div class="flex">
             <svg class="w-[25px] h-[25px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.<path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
             <p class="ml-2">Pick up location</p>
+            </div>
+            <div>
+            <p class="font-bold ml-2 text-1xl ">Start-date</p>
+
             </div>
             
         </div>
@@ -35,6 +39,11 @@
             <svg class="w-[25px] h-[25px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.<path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
             <p class="ml-2">Drop location</p>
             </div>
+            <div>
+            <p class="font-bold ml-2 mt-2 text-1xl">End-date</p>
+
+            </div>
+            
 
         </div>
 

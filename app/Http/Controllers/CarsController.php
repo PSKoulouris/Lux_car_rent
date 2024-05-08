@@ -71,9 +71,10 @@ class CarsController extends Controller
 
     public function showBookingCard ($id) {
         
-        $singlecarinfo=Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')->select('cars.image','cars.id','cars.name','cars.year','cars.car_registration_nbr','cars.model', 'cars.weekly_rate','cars_types.nbr_places','cars_types.nbr_doors')->where('cars.id','=', $id)->get();
-         //return view('bookingpage',['singlecar'=>$singlecarinfo]);
-       dd($singlecarinfo);
+        $singlecarinfo=Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')->select('cars.image','cars.id','cars.name','cars.year','cars.car_registration_nbr','cars.model', 'cars.weekly_rate','cars_types.nbr_places','cars_types.nbr_doors','cars_types.body_type')->where('cars.id','=', $id)->get()->find($id);
+         return view('bookingpage',['singlecar' => $singlecarinfo]);
+       
+         //dd($singlecarinfo);
         
     }
 }
