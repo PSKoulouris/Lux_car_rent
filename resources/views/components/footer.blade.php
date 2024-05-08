@@ -9,25 +9,15 @@
                         <a href="{{--{{route('privacy')}}--}}" class="hover: text-gray-300 transition-all duration-500 ease-in-out"> Terms of service </a>
                     </li>
             </ul>
-<!--list2-->
-            <ul class= "p-3">
-                    <li> 
-                        <a href=" {{--{{route('contact')}}--}}" class="hover: text-gray-300 transition-all duration-500 ease-in-out"> Contact us </a>
-                    </li>
-                    <li>
-                        <a href="{{--{{route('about')}}--}}" class="hover: text-gray-300 transition transition-all duration-500 ease-in-out"> About us </a> 
-                    </li>
-            {{--<li> 
-                 <a href="{{ (route('') }}" class="hover: text-gray-300 transition-all duration-500 ease-in-out"> Find us </a>
-            </li> --}}
-                    <li> 
-                            <a href="{{--{{route('Home')}}--}}" class="hover: text-gray-300 transition-all duration-500 ease-in-out"> Home </a>
-                    </li>
-            </ul>
-        </div>
-<!--Icon list--> 
+<!-- Logo and Social Media Icons Together -->
+        <div class="flex flex-col items-center justify-center flex-grow">
+            <!-- Logo centered with flex properties -->
+            <div class="flex items-center justify-center">
+                    <img src="{{ url('images/Logo_lux Rent_transparent_fin.2.png')}}" alt="Logo" width="200" height="200">
+            </div>
+<!--Social media Icon and logo in the center--> 
         <div class="flex space-x-3 py-3">  
-        <!--instagram--> 
+<!--instagram--> 
             <div> 
                 <a href="#" class="flex items-center space-x-3 hover:text-sky-400 transition">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5" viewBox="0 0 16 16">
@@ -63,7 +53,25 @@
                                 <path d="M20.354 0H1.622C.727 0 0 .71 0 1.584v18.811c0 .875.727 1.586 1.622 1.586h18.732c.897 0 1.627-.711 1.627-1.586V1.584C21.982.71 21.251 0 20.354 0zM6.519 18.731h-3.26V8.241H6.52v10.49zM4.89 6.807a1.89 1.89 0 1 1 0-3.782 1.89 1.89 0 0 1 0 3.782zm13.841 11.924h-3.258V13.63c0-1.216-.022-2.781-1.694-2.781-1.696 0-1.957 1.325-1.957 2.693v5.189H8.564V8.241h3.127v1.433h.044c.435-.825 1.499-1.694 3.085-1.694 3.301 0 3.911 2.173 3.911 4.997v5.754z">
                                 </path>  
                             </svg>  
-        </div>                                  
+            </div>    
+        </div>                              
+<!--list2-->
+            <ul class= "p-3">
+                    <li> 
+                        <a href=" {{--{{route('contact')}}--}}" class="hover: text-gray-300 transition-all duration-500 ease-in-out"> Contact us </a>
+                    </li>
+                    <li>
+                        <a href="{{--{{route('about')}}--}}" class="hover: text-gray-300 transition transition-all duration-500 ease-in-out"> About us </a> 
+                    </li>
+            {{--<li> 
+                 <a href="{{ (route('') }}" class="hover: text-gray-300 transition-all duration-500 ease-in-out"> Find us </a>
+            </li> --}}
+                    <li> 
+                            <a href="{{--{{route('Home')}}--}}" class="hover: text-gray-300 transition-all duration-500 ease-in-out"> Home </a>
+                    </li>
+            </ul>
+        </div>
+
     </div>
 <!-- copyright LuxRent information-->
     <div class="flex justify-center p-4">
