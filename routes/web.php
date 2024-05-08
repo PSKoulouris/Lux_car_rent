@@ -26,11 +26,11 @@ Route::get('/view', function () {
 
 Route::get('/about', function () {
     return view('aboutus');
-});
+})->name('about');
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->name('contact');
 Route::get('/booking', function () {
     return view('bookingpage');
 });
