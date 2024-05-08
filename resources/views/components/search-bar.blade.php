@@ -62,12 +62,12 @@
                        </div>
                        <div class="mr-2 flex flex-col gap-1">
                         <label for="start-date" class="text-white font-small">Select Your Start Date</label>
-                        <input type="datetime-local" name="start-date" value="" id="start-date" class="bg-transparent rounded-xl text-white " placeholder="Select your start date" >
+                        <input type="date" name="start-date" min="2024-05-05" id="start-date" class="bg-transparent rounded-xl text-white " placeholder="Select your start date" >
             
                          </div>
                          <div class="mr-2 flex flex-col gap-1">
                          <label for="end-date" class="text-white font-small">Select Your end Date</label>
-                       <input type="datetime-local" name="end-date" value=""    id="end-date" class="bg-transparent rounded-xl text-white " placeholder="Select your end date">
+                       <input type="date" name="end-date" min="2024-05-05"  id="end-date" class="bg-transparent rounded-xl text-white " placeholder="Select your end date">
            
                         </div>
                         <div class="mr-2 flex flex-col gap-1">
