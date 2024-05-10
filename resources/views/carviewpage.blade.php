@@ -1,5 +1,5 @@
 <x-mainlayout>
-    <x-nav-picture>
+    <x-nav-picture class="relative">
 </x-nav-picture>
 <!-- creating two div to split the page into two to view page for filter and car view -->
 <div class="w-[80%] mx-auto shadow-md bg-white mt-5 pt-4 text-center rounded-lg font-bold text-2xl"> Here is your Selection </div>
