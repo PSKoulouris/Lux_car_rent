@@ -1,4 +1,4 @@
-<x-mainlayout>
+<x-mainlayout >
     <x-nav-picture class="relative">
 </x-nav-picture>
 @if(isset($singlecar))
@@ -6,4 +6,6 @@
 @else
 <p>error</p>
 @endif
+<x-bookingreciept>
+</x-bookingreciept>
 </x-mainlayout>
