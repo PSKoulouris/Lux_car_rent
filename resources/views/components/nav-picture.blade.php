@@ -5,3 +5,5 @@
                 Deleted class=h-500px and added h-auto to maintain image structure in different browser windows-->
     <img src="{{ url('images/MainCar_multiplepages_fin_550px.jpg')}}" alt="" class="w-full h-auto">
 </div>
+
+

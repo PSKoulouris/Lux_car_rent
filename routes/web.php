@@ -19,6 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+// Route for Rental agreement page
+Route::get('/rental_agreement', function () {
+    return view('rental_agreement');
+})->name('rental_agreement');
+
 Route::get('/view', function () {
     return view('carviewpage');
 })->name('carviewpage');
