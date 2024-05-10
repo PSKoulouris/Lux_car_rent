@@ -1,5 +1,5 @@
 @if(isset($id))
-<a href="/showbooking/{{$id}}">
+    <a href="/showbooking/{{$id}}">
  @endif
 <div class="w-[350px] h-[400px] flex flex-col justify-center items-center shadow-md bg-gray-100 mx-auto rounded-xl" >
     <div class="rounded-xl w-[90%] mx-auto bg-gray-300 ">
@@ -17,14 +17,10 @@
         </div>  
         <div class="flex justify-end">
             <p class="font-medium bg-gray-200 w-[250px] text-center mt-1 rounded-xl">Best price for a week <span class="font-bold">&#8364;{{ $price }}</span> </p>
-        </div>  
-        
-       
-        
+        </div>   
     </div>
-
 </div>
 @if(isset($id))
-</a>
+    </a>
 @endif
 

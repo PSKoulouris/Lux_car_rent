@@ -1,15 +1,19 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CarsController;
+use App\Http\Controllers\FilterController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-// route for adminTest.blade.php
-Route::get('/showAdmin', function(){
-    return view('adminTest');
-});
+// route for admin
+Route::get('/showAllRecors', [AdminController::class, 'showAllRecords'])->name('showAllRecors');
+Route::post('/createDataAdmin', [AdminController::class,'createNewData'])->name('createCars');
+Route::post('/updateDataAdmin/{id1}/{id2}' , [AdminController::class, 'updateDataAdmin'])->name('updateCars');
+Route::post('/deleteDataAdmin/{id}', [AdminController::class, 'deleteDataAdmin'])->name('deleteCar');
 
-Route::post('/createDataAdmin', [CarsController::class,'createNewData'])->name('createCars');
+// filter route
+Route::get('/filterCarsByLocation', [FilterController::class, 'showFilterCars'])->name('filterCarsByLocation');
 // show cars for car view
 Route::get('/showCars', [CarsController::class, 'showCars'])->name('showcars');
 
