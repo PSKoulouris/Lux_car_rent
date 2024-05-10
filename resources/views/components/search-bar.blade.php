@@ -27,18 +27,22 @@
     <!--Philippe: changed image/img7.jpg by updated main picture image/MainCar_WelcomePage_fin.jpg -->
     <img src="{{ url('images/MainCar_WelcomePage_fin.jpg') }}" class="bg-cover" alt="">
     <!-- creating div to have text above the image -->
-     <div class="flex flex-col gap-2 justify-center items-center absolute top-[10%] right-[33%]">
+    <div class="flex flex-col gap-2 p-4 justify-center items-center  absolute top-[10%] right-[30%]">
+    
         <p class="text-2xl font-bold text-white">Attracting Discounts just for you</p>
         <p class="text-6xl font-bold text-orange-500">Find Best Rental Car</p>
-     </div>
+     
      <!-- creating a div to nextstep text -->
-    <div class="absolute top-[20%] right-[37%] bg-transparent w-[400px] h-[300px] flex flex-col">
-        <div class="flex flex-col justify-center items-center">
+    
+        
             <p class="text-4xl font-bold text-white">For Rates & Availability</p>
             <p class="text-2xl font-bold text-orange-500">Search For Your Car</p>
-        </div>
+        
+
     </div>
-        <div class="flex gap-4 mt-5 absolute top-[30%] right-[25%]">
+    
+    </div>
+        <div class="flex gap-4 mt-5 absolute top-[50%] right-[25%]">
           <form action="{{route('showcars')}}" method="get" class="flex"> 
             
 
