@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('body_type');
             $table->string('nbr_places');
             $table->string('nbr_doors');
+            $table->string('fuel');
             $table->timestamps();
         });
     }

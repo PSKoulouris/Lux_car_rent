@@ -1,11 +1,11 @@
 @if(isset($id))
-<a href="/showbooking/{{$id}}">
+    <a href="/showbooking/{{$id}}">
  @endif
 <div class="w-[300px] h-[370px] flex flex-col justify-center items-center shadow-md bg-gray-100 mx-auto rounded-xl" >
     <div class="rounded-xl w-[90%] mx-auto bg-gray-300">
           <!-- <img src="images/dark1.webp" alt="" class="object-cover  w-[150px] h-[150px]"> -->
           <!-- <div class="w-[240px] h-[150px] bg-cover">{{ $image }} </div> -->
-          <img src="{{ asset($image) }}" alt="" class="w-[280px] h-[180px] bg-cover">
+        <img src="{{ asset($image) }}" alt="" class="w-[280px] h-[180px] bg-cover">
     </div>
     <div class="flex flex-col">
         {{-- passing the arguments here for the car info/view --}}
@@ -17,14 +17,10 @@
         </div>  
         <div class="flex justify-end">
             <p class="font-medium bg-gray-200 w-[250px] text-center mt-1 rounded-xl">Best price for a week <span class="font-bold">&#8364;{{ $price }}</span> </p>
-        </div>  
-        
-       
-        
+        </div>   
     </div>
-
 </div>
 @if(isset($id))
-</a>
+    </a>
 @endif
 

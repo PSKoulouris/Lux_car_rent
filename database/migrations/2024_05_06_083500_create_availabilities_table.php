@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->date('availability_start');
             $table->date('availability_end');
+            $table->string('location');
             // column foreign key
             $table->unsignedBigInteger('car_id');
             $table->timestamps();
