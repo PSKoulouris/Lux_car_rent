@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Availability extends Model
 {
     use HasFactory;
+    public function cars(){
+        return $this->belongsTo(Cars::class);
+    }
 }

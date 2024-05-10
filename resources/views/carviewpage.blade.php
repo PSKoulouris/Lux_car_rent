@@ -7,31 +7,38 @@
 <div class="w-[80%] mx-auto shadow-md bg-white mt-5 pt-4 flex gap-8" >
   <div class="w-[25%] mx-auto mt-5 pt-4 rounded-lg" >
     {{-- form with a route for filterCarsByLocation  --}}
-    <form action="{{route('filterCarsByLocation')}}" method="GET" class="border border-gray-200 flex flex-col gap-4 mx-auto p-2 rounded-lg">
+    <form action="{{route('filterCars')}}" method="GET" class="border border-gray-200 flex flex-col gap-4 mx-auto p-2 rounded-lg">
       @csrf
       <div class="border-b border-gray-200 text-2xl font-bold">Filter</div>
-      <!-- code for selecting the location -->
+      {{-- filterCarsByLocation --}}
       {{-- Flavian, I change the input name="location" --}}
       <div class="border-b border-gray-200 p-2 ">
         <p class="font-bold text-1xl">Select your Location</p>
-        <input type="checkbox" id="clervaux" name="location">
+        <input type="checkbox" id="clervaux" name="location[]">
         <label for="clervaux">Clervaux</label><br>
-        <input type="checkbox"  id="diekirch" name="location">
+        <input type="checkbox"  id="diekirch" name="location[]">
         <label for="diekirch">Diekirch</label><br>
-        <input type="checkbox" id="luxembourg" name="location">
+        <input type="checkbox" id="luxembourg" name="location[]">
         <label for="luxembourg">Luxembourg</label><br>
-        <input type="checkbox" id="esch-sur-alzette" name="location">
+        <input type="checkbox" id="esch-sur-alzette" name="location[]">
         <label for="esch-sur-alzette">Esch-Sur-Alzette</label><br>
-        <input type="checkbox" id="lux-airport"name="location">
+        <input type="checkbox" id="lux-airport"name="location[]">
         <label for="lux-airport">Luxembourg-Airport</label><br>
       </div>
       <!-- code for selcting the car type -->
+      {{-- filterCarsByFuel --}}
       <div class="border-b border-gray-200 p-2">
-        <p class="font-bold text-1xl">Car-Type</p>
-        <input type="checkbox" id="electric" name="electric">
+        <p class="font-bold text-1xl">Fuels</p>
+        <input type="checkbox" id="petrol" name="fuel[]">
+        <label for="petrol">Petrol</label><br>
+        <input type="checkbox" id="diesel" name="fuel[]">
+        <label for="diesel">Diesel</label><br>
+        <input type="checkbox" id="electric" name="fuel[]">
         <label for="electric">Electric</label><br>
-        <input type="checkbox" id="hybrid" name="hybrid">
+        <input type="checkbox" id="hybrid" name="fuel[]">
         <label for="hybrid">Hybrid</label><br>
+        <input type="checkbox" id="hydrogen" name="fuel[]">
+        <label for="hydrogen">Hydrogen</label><br>
       </div>
       <!-- code for selcting the car model -->
       <div class="border-b border-gray-200 p-2">

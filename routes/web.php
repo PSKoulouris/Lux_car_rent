@@ -13,7 +13,9 @@ Route::post('/updateDataAdmin/{id1}/{id2}' , [AdminController::class, 'updateDat
 Route::post('/deleteDataAdmin/{id}', [AdminController::class, 'deleteDataAdmin'])->name('deleteCar');
 
 // filter route
-Route::get('/filterCarsByLocation', [FilterController::class, 'showFilterCars'])->name('filterCarsByLocation');
+Route::get('/filterCars', [FilterController::class, 'showFilterCars'])->name('filterCars');
+// Route::get('/filterCars', [FilterController::class, 'showFilterCarsByFuel'])->name('filterCars');
+
 // show cars for car view
 Route::get('/showCars', [CarsController::class, 'showCars'])->name('showcars');
 
