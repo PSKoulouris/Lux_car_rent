@@ -20,6 +20,8 @@ class FilterController extends Controller
             ->select('cars.id','cars.image','cars.name','cars.model','cars.year', 'cars.weekly_rate', 'cars.daily_rate','cars.car_registration_nbr','cars_types.body_type','cars_types.nbr_places','cars_types.nbr_doors','cars_types.fuel', 'availabilities.location');
             // Log::info('Generate SQL Query: '. $querySQL->toSql());
             // Filter by location !?
+          // dd($request->all());
+            //dd($querySQL);
             if ($request->has('location')) {
                 $location = $request->input('location'); // name of the input
                 $querySQL->whereIn('availabilities.location', $location);
@@ -30,8 +32,8 @@ class FilterController extends Controller
                 $querySQL->whereIn('cars_types.fuel', $fuel);
             }
 
-            $listCars = $querySQL->get();
-            dd($listCars );
+             $listCars = $querySQL->get();
+             dd($listCars );
             // Log the retrieved cars for debugging
             Log::info($listCars);
 
