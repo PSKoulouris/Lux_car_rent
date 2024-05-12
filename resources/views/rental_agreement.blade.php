@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> rental agreement </title>
-</head>
-<body>
- 
 <!--component main layout-->
       <x-mainlayout>
     <!--component navigation link with picture multiple pagez-->
@@ -196,11 +187,13 @@
             </ol>
         </section>
                 </div>
-    </body>
+
+    
 
     <!--components footer-->
     <x-footer />
+
 </x-mainlayout>
 
-</html>
+
 
