@@ -1,35 +1,59 @@
 <!--component main layout-->
-      <x-mainlayout>
-    <!--component navigation link with picture multiple pagez-->
+    <x-mainlayout>
+    <!--component navigation link with picture multiple pages-->
 
-      <x-nav-picture> </x-nav-picture>
+    <x-nav-picture> </x-nav-picture>
 
     <!-- rental_agreement page -->
 
     <div class="text-white p-10 font-arial" style="background-color:#40546F;">
-        <section>
+        <div class="flex flex-col items-center">   
             <h1 class="text-5xl text-orange-500"><strong> Rental Agreement </strong></h1><br>
-        </section>
-        <br>
-        <section class=" text-lg">
-            <p>Welcome to Lux Rent Car Rentals!</p><br>
-            <p>
-                Renting a car with us is easy, convenient, and transparent. Our
-                rental agreement provides detailed terms and conditions to
-                ensure a smooth and reliable experience. Whether you're renting
-                for business or leisure, we want you to feel confident and
-                informed about our policies. Please review the agreement below
-                before your next journey and for a comprehensive explanation of our terms, conditions, and
-                rental agreement, please download the following document:
-                <!-- 
+        </div>
+            <br>
+                <div class=" text-lg">
+                     <p>Welcome to Lux Rent Car Rentals!</p><br>
+                             <p class="text-justify w-3/4 h-auto">
+                                Renting a car with us is easy, convenient, and transparent. Our
+                                rental agreement provides detailed terms and conditions to
+                                ensure a smooth and reliable experience. Whether you're renting
+                                for business or leisure, we want you to feel confident and
+                                informed about our policies. Please review the agreement
+                                before your next journey by downloading a comprehensive explanation of our terms and conditions:
+                             </p>  <br>
+                </div>
+              <!-- 
                     link rental_agreement to a dowloadable pdf file located in public >files 
                     asset() ensures proper URL generation regardless of where your application is hosted-->
-                     <a href="{{ asset('files/Lux Rent Terms and Conditions.pdf') }}" download="rental_agreement" class="text-orange-500 hover:text-orange-300">Rental Agreement-pdf</a>
-            </p>
-            <br><br>
-        </section>
+               <div> 
+                    <div class="flex items-center space-x-3">
+                    <div>Eng:
+                    </div> 
+                        <div> 
+                            <a href="{{ asset('files/Lux Rent Terms and Conditions.pdf') }}" download="rental_agreement" class="text-orange-500 hover:text-orange-300">Rental Agreement-pdf</a>
+                        </div>
+                    </div>   
 
-        <section class="ml-12">
+                <div class="flex items-center space-x-3"> 
+                    <div>Ger:
+                    </div>
+                        <div> 
+                             <a href="{{ asset('files/Lux Rent Bedingungen.pdf') }}" download="Bedingungen" class="text-orange-500 hover:text-orange-300"> Bedingungen-pdf</a>
+                        </div>
+                </div>  
+                <div class="flex items-center space-x-6"> 
+                 <div>Fr:
+                </div> 
+                     <div> 
+                             <a href="{{ asset('files/Lux Rent Termes et Conditions.pdf') }}" download="Termes et Conditions" class="text-orange-500 hover:text-orange-300"> Termes et Conditions-pdf</a>
+                     </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+       
+
+     <!--   <section class="ml-12">
             <ol>
                 <li>
                     <strong class="text-2xl text-orange-500">Rental Period</strong>
@@ -186,14 +210,11 @@
                 </li>
             </ol>
         </section>
-                </div>
-
-    
+                </div>-->
 
     <!--components footer-->
     <x-footer />
-
-</x-mainlayout>
+    </x-mainlayout>
 
 
 
