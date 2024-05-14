@@ -27,7 +27,7 @@
     <!--Philippe: changed image/img7.jpg by updated main picture image/MainCar_WelcomePage_fin.jpg -->
     <img src="{{ url('images/MainCar_WelcomePage_fin.jpg') }}" class="bg-cover" alt="">
     <!-- creating div to have text above the image -->
-    <div class="flex flex-col gap-2 p-4 justify-center items-center bg-[#2D3B4E] md:absolute top-[10%] right-[32%] md:bg-transparent">
+    <div class="flex flex-col gap-2 p-4 justify-center items-center bg-[#2D3B4E] md:absolute top-[10%] right-[28%] md:bg-transparent">
     
         <p class="md:text-2xl font-bold text-white">Attracting Discounts just for you</p>
         <p class="md:text-6xl font-bold text-orange-500">Find Best Rental Car</p>
@@ -37,51 +37,20 @@
         
             <p class="md:text-4xl font-bold text-white">For Rates & Availability</p>
             <p class="md:text-2xl font-bold text-orange-500">Search For Your Car</p>
+
+            <form action="{{route('showcars')}}" method="get" >
+            <div class="mr-2 flex flex-col gap-1">
+                           
+                            <button type="submit"  id="submit"class="p-4  text-center w-full inline-flex items-center text-white border-2 h-[40px] rounded-xl">Search you Car</button>
+             </div>
+
+            </form>
         
 
     </div>
     
     </div>
-        <div class="flex bg-[#2D3B4E] items-center justify-center gap-4 mt-5 md:absolute top-[52%] right-[28%] md:bg-transparent">
-          <form action="{{route('showcars')}}" method="get" class="flex "> 
-            
-
-            
-                      <div class="mr-2  flex flex-col gap-1">
-                         <label for="location" class="text-white font-small">Pick-up-Location</label>
-                         <select name="location" id="location" class="bg-transparent rounded-xl text-white w-[200px] h-[43px]">
-                            <option value="">Select Your Location</option>
-
-                            <option value="clervaux" class=" text-black">clervaux</option>
-                            <option value="diekirch" class="text-black">Diekirch</option>
-                            <option value="luxembourg" class="text-black">Luxembourg</option>
-                            <option value="esch-sur-alzette" class="text-black">Esch-Sur-Alzette</option>
-                            <option value="airport" class="text-black">Luxembourg-Airport</option>
-                        
-                         </select>
-
-                        <!-- <input type="text" id="pick-up-location" name="pickup-location"class="bg-transparent rounded-xl text-white" placeholder="enter your location" > -->
-
-
-                       </div>
-                       <div class="mr-2 flex flex-col gap-1">
-                        <label for="start-date" class="text-white font-small">Select Your Start Date</label>
-                        <input type="date" name="start-date" min="2024-05-05" id="start-date" class="bg-transparent rounded-xl text-white " placeholder="Select your start date" >
-            
-                         </div>
-                         <div class="mr-2 flex flex-col gap-1">
-                         <label for="end-date" class="text-white font-small">Select Your end Date</label>
-                       <input type="date" name="end-date" min="2024-05-05"  id="end-date" class="bg-transparent rounded-xl text-white " placeholder="Select your end date">
-           
-                        </div>
-                        <div class="mr-2 flex flex-col gap-1">
-                            <label for="submit">Let search</label>
-                            <button type="submit"  id="submit"class="text-white  w-[120px] text-center border-2 h-[40px] rounded-xl">Search</button>
-                        </div>
-
-            </form>
-
-        </div>
+   
    
 
     </div>
@@ -90,3 +59,4 @@
 
 
 
+0
