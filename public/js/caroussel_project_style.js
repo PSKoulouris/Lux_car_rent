@@ -1,3 +1,4 @@
+/*
 window.addEventListener("load", () => {
     autoSlide();
 });
@@ -40,4 +41,92 @@ function getItemActiveIndex() {
     return Array.from(items).indexOf(
         document.querySelector(".carousel_item_active")
     );
+}
+*/
+
+/*window.addEventListener("load", () => {
+    autoSlide();
+});
+
+function autoSlide() {
+    setInterval(() => {
+        slide(getItemActiveIndex() + 1);
+    }, 5000);
+}
+
+function slide(toIndex) {
+    const items = document.querySelectorAll(".carousel-item");
+    const currentItem = document.querySelector(".carousel-item-active");
+
+    if (toIndex >= items.length) {
+        toIndex = 0;
+    }
+
+    const nextItem = items[toIndex];
+
+    currentItem.classList.remove("carousel-item-active");
+    nextItem.classList.add("carousel-item-active");
+}
+
+function getItemActiveIndex() {
+    const items = document.querySelectorAll(".carousel-item");
+    return Array.from(items).indexOf(
+        document.querySelector(".carousel-item-active")
+    );
+}
+*/
+// transform remaining custom css into javascript.
+window.addEventListener("load", () => {
+    initializeCarouselStyles();
+    autoSlide();
+});
+
+function autoSlide() {
+    setInterval(() => {
+        slide(getItemActiveIndex() + 1);
+    }, 5000);
+}
+
+function slide(toIndex) {
+    const items = document.querySelectorAll(".carousel-item");
+    const currentItem = document.querySelector(".carousel-item-active");
+
+    if (toIndex >= items.length) {
+        toIndex = 0;
+    }
+
+    const nextItem = items[toIndex];
+
+    currentItem.classList.remove("opacity-100");
+    nextItem.classList.add("opacity-100");
+
+    currentItem.classList.remove("carousel-item-active");
+    nextItem.classList.add("carousel-item-active");
+}
+
+function getItemActiveIndex() {
+    const items = document.querySelectorAll(".carousel-item");
+    return Array.from(items).indexOf(
+        document.querySelector(".carousel-item-active")
+    );
+}
+
+function initializeCarouselStyles() {
+    const items = document.querySelectorAll(".carousel-item");
+
+    items.forEach((item) => {
+        item.classList.add(
+            "absolute",
+            "inset-0",
+            "transition-opacity",
+            "duration-800",
+            "ease-in-out",
+            "opacity-0"
+        );
+    });
+
+    const activeItem = document.querySelector(".carousel-item-active");
+    if (activeItem) {
+        activeItem.classList.add("opacity-100");
+    }
 }
