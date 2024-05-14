@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -15,10 +16,14 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+    <x-nav-link-us>
+</x-nav-link-us>
+     
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-0 sm:pt-0 bg-gray-100">
+  
             <div>
                 <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                   <div class="w-28 h-28 rounded-full bg-[#2D3B4E] flex justify-center items-center"> <x-application-logo class="w-16 h-16 fill-current text-gray-500" /></div>
                 </a>
             </div>
 
@@ -28,3 +33,4 @@
         </div>
     </body>
 </html>
+

@@ -1,5 +1,3 @@
-
-
 <x-mainlayout>
     <x-nav-picture class="relative">
 </x-nav-picture>
@@ -28,18 +26,19 @@
               @csrf
                 <div class="mb-6">
                 <label for="email" class="block mb-2 text-lg font-bold text-gray-900 dark:text-white">Your email</label>
-                <input type="email" id="email" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required />
+                <input type="email" id="email" name="email" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@company.com" required />
                 </div>
                  <div class="mb-6">
                 <label for="subject" class="block mb-2 text-lg font-bold text-gray-900 dark:text-white">Subject</label>
-                <input type="text" id="subject" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Let us know how we can help you" required />
+                <input type="text" id="subject" name="subject" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Let us know how we can help you" required />
                  </div>
                  <div class="mb-6">
                   <label for="message" class="block mb-2 text-lg font-bold text-gray-900 dark:text-white">Your message</label>
-                 <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-100 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
+                 <textarea id="message" name="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-100 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Your message..."></textarea>
                </div>
                <div class="mb-6">
-               <button type="submit" id="contact-submit" onclick="contactfunction()" class="bg-blue-500 rounded-xl border border-gray-300 text-lg font-bold w-full h-[50px]">Send message</button>
+               <button type="submit" id="contact-submit" name="submit" onclick="contactfunction()" class="inline-flex items-center px-4 py-2 bg-gray
+               -100 border border-gray-100 rounded-md font-semibold text-xs text-black uppercase tracking-widest hover:bg-gray-700 focus:bg-gray-700 active:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition ease-in-out duration-150">Send message</button>
                </div>
                </form>
         </div>

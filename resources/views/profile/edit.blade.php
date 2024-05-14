@@ -11,10 +11,7 @@
                 <div class="max-w-xl">
                     @include('profile.partials.update-profile-information-form')
                 </div>
-                {{-- included by Flavian is the profile pictures of the profile/customer  --}}
-                <div class="justify-end m-auto">
-                   @include('profile.partials.imageProfile-page')
-                </div>
+             
             </div>
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 {{-- try also to put the driver licence and id  --}}
