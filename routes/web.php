@@ -1,9 +1,11 @@
+
 <?php
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\FilterController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CustomersController;
 use Illuminate\Support\Facades\Route;
 
 // route for admin
@@ -54,6 +56,21 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/mybooking', function(){
+        return view("profile/mybooking");
+    })->name('profile.booking');
+    Route::get('/myfeedback', function(){
+        return view("profile/partials/myfeedback");
+    })->name('profile.feedback');
+    Route::post('/customerprofile',[CustomersController::class,'store'])->name('customers.profile');
 });
+
+// Creating api routes to first test in postman
+Route::get('
+', [CarsController::class, 'showapiCars'])->name('showapicars');
+
+Route::get('/api/filterCars', [FilterController::class, 'showFilterapiCars'])->name('filterapiCars');
+
+Route::get('/api/showbooking/{id}',[CarsController::class,'showBookingapiCard'])->name('apisearch');
 
 require __DIR__.'/auth.php';
