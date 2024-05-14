@@ -33,7 +33,7 @@ class FilterController extends Controller
             }
 
              $listCars = $querySQL->get();
-             dd($listCars );
+            //  dd($listCars );
             // Log the retrieved cars for debugging
             Log::info($listCars);
 
@@ -96,5 +96,3 @@ class FilterController extends Controller
         }
     }
 }
-
-
