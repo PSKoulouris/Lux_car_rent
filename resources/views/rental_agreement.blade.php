@@ -6,14 +6,15 @@
 
     <!-- rental_agreement page -->
 
-    <div class="text-white p-10 font-arial" style="background-color:#40546F;">
-        <div class="flex flex-col items-center">   
+    <!-- <div class="flex-col mt-8 p-4 mx-auto bg-white shadow-md w-[70%] gap-4 rounded-lg"> -->
+    <div class="text-black p-10 font-arial bg-gray-100 flex flex-col mt-8 mb-8 p-4 mx-auto bg-white shadow-md w-[70%] gap-4 rounded-lg">
+        <div class="flex flex-col mt-8 p-4 mx-auto bg-white shadow-md">   
             <h1 class="text-5xl text-orange-500"><strong> Rental Agreement </strong></h1><br>
         </div>
             <br>
-                <div class=" text-lg">
+                <div class=" text-lg p-5">
                      <p>Welcome to Lux Rent Car Rentals!</p><br>
-                             <p class="text-justify w-3/4 h-auto">
+                             <p class="text-justify h-auto">
                                 Renting a car with us is easy, convenient, and transparent. Our
                                 rental agreement provides detailed terms and conditions to
                                 ensure a smooth and reliable experience. Whether you're renting
@@ -25,7 +26,7 @@
               <!-- 
                     link rental_agreement to a dowloadable pdf file located in public >files 
                     asset() ensures proper URL generation regardless of where your application is hosted-->
-               <div> 
+               <div class="p-5"> 
                     <div class="flex items-center space-x-3">
                     <div>Eng:
                     </div> 
