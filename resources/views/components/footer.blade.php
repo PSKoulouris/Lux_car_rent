@@ -19,7 +19,7 @@
             </ul>
 
 </div>
- <!--second div-->
+ <!--second division-->
 <div class="flex  flex-col">
     <div class="flex justify-center item-center">
     <img src="{{ url('images/Logo_lux Rent_transparent_fin.2.png')}}" alt="Logo" width="200" height="200">
