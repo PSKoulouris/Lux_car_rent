@@ -47,7 +47,7 @@ class CarsController extends Controller
         ->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')
         ->select('cars.image','cars.id','cars.name', 'cars.model', 'cars.weekly_rate','cars_types.nbr_places','cars_types.nbr_doors')->get();
         Log::info($listCars);
-        return view('carviewpage', ['listCars' => $listCars]);
+        return response()->json($listCars);
     }
     public function showBookingapiCard ($id) {
         $singlecarinfo=Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')
@@ -56,7 +56,7 @@ class CarsController extends Controller
         ->where('cars.id','=', $id)
         ->get()
         ->find($id);
-         return view('bookingpage',['singlecar' => $singlecarinfo]);
+        return response()->json($singlecarinfo);
          //dd($singlecarinfo);
     }
 

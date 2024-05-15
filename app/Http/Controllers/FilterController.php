@@ -89,7 +89,7 @@ class FilterController extends Controller
             Log::info($listCars);
 
             // Pass the list of cars to the view
-            return view('carviewpage', ['listCars' => $listCars]);
+          return response()->json($listcars);
         } catch (Exception $e) {
             Log::error('DB error '. $e->getMessage());
             return response()->json(['error' => 'Database'], 500);

@@ -66,8 +66,7 @@ Route::middleware('auth')->group(function () {
 });
 
 // Creating api routes to first test in postman
-Route::get('
-', [CarsController::class, 'showapiCars'])->name('showapicars');
+Route::get('/api/showCars', [CarsController::class, 'showapiCars'])->name('showapicars');
 
 Route::get('/api/filterCars', [FilterController::class, 'showFilterapiCars'])->name('filterapiCars');
 

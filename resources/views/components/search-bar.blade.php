@@ -29,7 +29,7 @@
     <!-- creating div to have text above the image -->
     <div class="flex flex-col gap-2 p-4 justify-center items-center bg-[#2D3B4E] md:absolute top-[10%] right-[28%] md:bg-transparent">
     
-        <p class="md:text-2xl font-bold text-white">Attracting Discounts just for you</p>
+        <p class="md:text-2xl font-bold text-white">Attracting Discounts Just for you</p>
         <p class="md:text-6xl font-bold text-orange-500">Find Best Rental Car</p>
      
      <!-- creating a div to nextstep text -->
@@ -41,7 +41,7 @@
             <form action="{{route('showcars')}}" method="get" >
             <div class="mr-2 flex flex-col gap-1">
                            
-                            <button type="submit"  id="submit"class="p-4  text-center w-full inline-flex items-center text-white border-2 h-[40px] rounded-xl">Search you Car</button>
+                            <button type="submit"  id="submit"class="p-4 text-center w-full inline-flex items-center text-white border-2 h-[40px] rounded-xl">Search you Car</button>
              </div>
 
             </form>
