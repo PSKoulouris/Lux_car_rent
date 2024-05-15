@@ -47,6 +47,9 @@ Route::get('/contact', function () {
 Route::get('/booking', function () {
     return view('bookingpage');
 });
+Route::get('/cardetails', function () {
+    return view('cardetails');
+});
  
 Route::get('/dashboard', function () {
     return view('dashboard');
