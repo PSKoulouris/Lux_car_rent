@@ -41,6 +41,26 @@ class CarsController extends Controller
          return view('bookingpage',['singlecar' => $singlecarinfo]);
          //dd($singlecarinfo);
     }
+   
+    public function showapiCars () {
+        $listCars = Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')
+        ->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')
+        ->select('cars.image','cars.id','cars.name', 'cars.model', 'cars.weekly_rate','cars_types.nbr_places','cars_types.nbr_doors')->get();
+        Log::info($listCars);
+        return response()->json($listCars);
+    }
+    public function showBookingapiCard ($id) {
+        $singlecarinfo=Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')
+        ->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')
+        ->select('cars.id','cars.image','cars.name','cars.model','cars.year', 'cars.weekly_rate', 'cars.daily_rate','cars.car_registration_nbr','cars_types.body_type','cars_types.nbr_places','cars_types.nbr_doors','cars_types.fuel')
+        ->where('cars.id','=', $id)
+        ->get()
+        ->find($id);
+        return response()->json($singlecarinfo);
+         //dd($singlecarinfo);
+    }
+
+
 }
 
 
