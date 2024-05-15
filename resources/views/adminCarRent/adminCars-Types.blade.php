@@ -71,6 +71,7 @@
             <td><input type="text" name="fuel" placeholder="electric, hybrid, petrol, diesel ..."></td>
             <td></td>
             <td></td>
+
             <td><button type="submit">Create new data</button></td>
         </form>
     </tr>

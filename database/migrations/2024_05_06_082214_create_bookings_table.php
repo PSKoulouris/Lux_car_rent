@@ -19,13 +19,13 @@ return new class extends Migration
             $table->string('status');
 
             // columns foreign-key
-            $table->unsignedBigInteger('customer_id');
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('car_id');
             
             $table->timestamps();
 
              // foreign-key contraint
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade')->onUpdate('cascade');
         });
     }

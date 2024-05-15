@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
 
         <!-- Name -->
@@ -14,6 +14,27 @@
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
+
+        {{-- Driver Licence --}}
+        <div>
+            <x-input-label for="driver_licence" :value="__('Insert a picture with the driver licence')" />
+            <x-driver-licence/>
+            <x-input-error :messages="$errors->get('driver_licence')" class="mt-2" />
+        </div>
+        {{-- Proof of ID --}}
+        <div>
+            <x-input-label for="identification_data_proof" :value="__('ID proof')" />
+            <x-proof-id/>
+            <x-input-error :messages="$errors->get('identification_data_proof')" class="mt-2" />
+        </div>
+
+        {{-- Address --}}
+        <div class="mt-4">
+            <x-input-label for="address" :value="__('Address')" />
+            <x-address id="adress" class="block mt-1 w-full"/>
+            {{-- <x-text-input id="adress" class="block mt-1 w-full" type="text" name="address" :value="old('address')"/> --}}
+            <x-input-error :messages="$errors->get('address')" class="mt-2" />
         </div>
 
         <!-- Password -->
@@ -43,7 +64,6 @@
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('Already registered?') }}
             </a>
-
             <x-primary-button class="ms-4">
                 {{ __('Register') }}
             </x-primary-button>
