@@ -76,3 +76,11 @@ Route::get('/api/filterCars', [FilterController::class, 'showFilterapiCars'])->n
 Route::get('/api/showbooking/{id}',[CarsController::class,'showBookingapiCard'])->name('apisearch');
 
 require __DIR__.'/auth.php';
+
+
+
+//routes for csv automation controller: Philippe
+use App\Http\Controllers\CSVAutomationAdminController;
+Route::post('/uploadCsv', [CSVAutomationAdminController::class, 'uploadCsv'])->name('uploadCsv');
+Route::get('/showAllRecords2', [CSVAutomationAdminController::class, 'showAllRecords'])->name('showAllRecords2');
+    
