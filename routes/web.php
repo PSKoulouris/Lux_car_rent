@@ -62,7 +62,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/myfeedback', function(){
         return view("profile/partials/myfeedback");
     })->name('profile.feedback');
-    Route::post('/customerprofile',[CustomersController::class,'store'])->name('customers.profile');
+    // Route::post('/customerprofile',[CustomersController::class,'store'])->name('customers.profile');
 });
 
 // Creating api routes to first test in postman
