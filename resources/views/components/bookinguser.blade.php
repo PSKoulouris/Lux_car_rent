@@ -1,12 +1,4 @@
- <!-- information div -->
- <div class="w-[80%] h-[100px] mx-auto shadow-md rounded-lg  flex bg-white mt-5 pt-4">
-    <div class="w-[95%] flex flex-col border border-gray-200 mb-2 mx-auto" >
-        <div class="w-full h-[30px] bg-cyan-600 mx-auto pl-2 text-white text-1xl"> Booking Page</div>
-         <div class="w-full h-[40px] bg-white mx-auto pl-2 flex items-center font-medium"> Please check all information before conforming booking</div>
-    </div>
-    </div>
-<!-- creating a page to view booking details -->
-    {{-- <div class="w-[80%] mx-auto shadow-md rounded-lg  flex  bg-white mt-5 pt-4">
+<div class="w-[80%] mx-auto shadow-md rounded-lg  flex  bg-white mt-5 pt-4">
    
 
     <!-- creating two div to segregate the page into two parts one for car details and one for car booking -->
@@ -55,9 +47,9 @@
         <!-- Details of the customer -->
      <div class=" flex flex-col w-full bg-gray-100 mt-4">
         <p class="ml-4 mt-4">Name: {{ $username }}</p>
-        {{-- <p class="ml-4 mt-4">Address: {{ $address }}</p> --}}
-        {{-- <p class="ml-4 mt-4">Email: {{ $email }}</p> --}}
-        {{-- @if (isset($phoneNumber))
+        <p class="ml-4 mt-4">Address: {{ $address }}</p>
+        <p class="ml-4 mt-4">Email: {{ $email }}</p>
+        @if (isset($phoneNumber))
             <p class="ml-4 mt-4">Number phone: {{ $phoneNumber }}</p>
         @endif
         <p class="ml-4 mt-4">Booking Days_from the dates UP</p>
@@ -68,37 +60,3 @@
             <button class="w-full border bg-gray-300 font-bold text-1xl rounded-xl p-2">Confirm Booking</button>
         </form>
     </div>
-
-   </div> --}}
-   <!-- car details starts here -->
-   <div class="w-[40%] mx-auto border border-gray-200 bg-white rounded-sm mt-5 pt-4 flex  flex-col gap-4 p-4">
-    <div class="w-full bg-cyan-600 text-white flex items-center pl-2 font-bold text-1xl">
-        Car Details
-    </div>
-    {{-- car view inside booking page with all the details --}}
-     <div class="">
-        <img src="{{ asset($image) }}" alt="" class="w-[500px]  bg-gray-200 bg-cover">
-     </div>
-     <!-- starting div for content -->
-     {{-- All the details inside the car-card for booking --}}
-     <div class="flex flex-col p-2 w-[500px]">
-        <p class="border  w-[400px] bg-gray-200 text-2xl font-bold rounded-sm mb-2 pl-2">{{ $name }}</p>
-        <div class="flex mb-2">
-            <p class="border bg-gray-200 text-1xl flex justify-center items-center font-bold rounded-sm w-[150px] ">{{ $model }}</p>
-            <p class="border bg-gray-200 text-1xl flex justify-center items-center font-bold rounded-sm ml-6 w-[150px] ">{{ $year }}</p>
-        </div>
-       
-        <p class="border bg-gray-200 w-[400px] text-1xl font-bold rounded-sm pl-2 ">{{ $regno }}</p>
-        <div class="flex mt-2 mb-2 gap-2">
-            <p class="border bg-gray-200 text-1xl flex justify-center items-center font-bold rounded-sm w-[100px]">{{ $type }}</p>
-            <p class="border bg-gray-200 text-1xl flex justify-center items-center font-bold rounded-sm w-[100px]">{{ $seat }}</p>
-            <p class="border bg-gray-200 text-1xl flex justify-center items-center font-bold rounded-sm w-[100px]">{{ $door }}</p>
-        </div>
-        <div class="flex mt-2 mb-2 gap-2">
-            <p class="border bg-gray-200 text-1xl flex justify-center items-center font-bold rounded-sm w-[100px]">{{ $fuel }}</p>
-            <p class="border bg-gray-200 text-1xl flex justify-center items-center font-bold rounded-sm w-[100px]">Daily price: {{$dailyRate}}&euro;</p>
-            <p class="border bg-gray-200 text-1xl flex justify-center items-center font-bold rounded-sm w-[100px]">Best price: {{$weeklyRate}}&euro;</p>
-        </div>
-     </div>
-   </div>
-</div>

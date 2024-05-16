@@ -2,10 +2,10 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CarsController;
 use App\Http\Controllers\FilterController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\CustomersController;
 use Illuminate\Support\Facades\Route;
 
 // route for admin
@@ -21,7 +21,9 @@ Route::get('/filterCars', [FilterController::class, 'showFilterCars'])->name('fi
 // show cars for car view
 Route::get('/showCars', [CarsController::class, 'showCars'])->name('showcars');
 
- Route::get('/showbooking/{id}', [CarsController::class, 'showBookingCard'])->name('search');
+//  Route::get('/showbooking/{id}', [CarsController::class, 'showBookingCard'])->name('search');
+Route::get('/carDetails/{id}', [CarsController::class, 'showCarDetails'])->name('search');
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -44,9 +46,7 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
-Route::get('/booking', function () {
-    return view('bookingpage');
-});
+
 Route::get('/cardetails', function () {
     return view('cardetails');
 });
@@ -59,13 +59,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // route Booking page
+    Route::get('/booking/{id}',[CarsController::class, 'showBookingDetails']);
+
+    Route::get('/showUserDetails', [BookingController::class, 'showUserDetails'])->name('show.userDetails');
+
     Route::get('/mybooking', function(){
         return view("profile/mybooking");
     })->name('profile.booking');
     Route::get('/myfeedback', function(){
         return view("profile/partials/myfeedback");
     })->name('profile.feedback');
-    // Route::post('/customerprofile',[CustomersController::class,'store'])->name('customers.profile');
 });
 
 // Creating api routes to first test in postman

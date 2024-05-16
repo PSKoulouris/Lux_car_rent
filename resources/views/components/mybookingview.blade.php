@@ -17,13 +17,11 @@
         <p>Model: {{ $model }}</p>
         <p>Type:{{ $type }}</p>
         <p>Doors:{{ $door }}</p>
-
     </div>
 </div>
 <!-- <table class="mt-7 mx-12 border-collapse w-[90%] ">
     <tr class="p-8 bg-cyan-600 text-white ">
         <th>
-
         </th>
     </tr>
 </table> -->
