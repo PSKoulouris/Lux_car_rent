@@ -25,7 +25,7 @@
 <div class="relative">
     <!-- created a image as background -->
     <!--Philippe: changed image/img7.jpg by updated main picture image/MainCar_WelcomePage_fin.jpg -->
-    <img src="{{ url('images/MainCar_WelcomePage_fin.jpg') }}" class="bg-cover" alt="">
+    <img src="{{ url('images/image_car_form_main_fin_low.jpg') }}" class="bg-cover" alt="">
     <!-- creating div to have text above the image -->
     <div class="flex flex-col gap-2 p-4 justify-center items-center bg-[#2D3B4E] md:absolute top-[10%] right-[28%] md:bg-transparent">
     
