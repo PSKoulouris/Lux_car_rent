@@ -7,6 +7,7 @@ use App\Models\Cars_type;
 use App\Models\Link_cars_type;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
@@ -31,15 +32,29 @@ class CarsController extends Controller
     //         dd($car);
     //     }
     // }
-    public function showBookingCard ($id) {
+    public function showCarDetails ($id) {
         $singlecarinfo=Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')
         ->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')
         ->select('cars.id','cars.image','cars.name','cars.model','cars.year', 'cars.weekly_rate', 'cars.daily_rate','cars.car_registration_nbr','cars_types.body_type','cars_types.nbr_places','cars_types.nbr_doors','cars_types.fuel')
         ->where('cars.id','=', $id)
         ->get()
         ->find($id);
-         return view('bookingpage',['singlecar' => $singlecarinfo]);
+         return view('cardetails',['singlecar' => $singlecarinfo]);
          //dd($singlecarinfo);
+    }
+
+    public function showBookingDetails ($id) {
+        $singlecarinfo=Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')
+        ->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')
+        ->select('cars.id','cars.image','cars.name','cars.model','cars.year', 'cars.weekly_rate', 'cars.daily_rate','cars.car_registration_nbr','cars_types.body_type','cars_types.nbr_places','cars_types.nbr_doors','cars_types.fuel')
+        ->where('cars.id','=', $id)
+        ->get()
+        ->find($id);
+        $users = Auth::user();
+        // dd($users);
+         return view('bookingpage',['singlecar' => $singlecarinfo, 'users' => $users]);
+         //dd($singlecarinfo);
+         //)
     }
    
     public function showapiCars () {
@@ -59,8 +74,17 @@ class CarsController extends Controller
         return response()->json($singlecarinfo);
          //dd($singlecarinfo);
     }
-
-
+    // moved the function in the BookingController
+    // public function showBookingDetails ($id) {
+    //     $singlecarinfo=Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')
+    //     ->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')
+    //     ->select('cars.id','cars.image','cars.name','cars.model','cars.year', 'cars.weekly_rate', 'cars.daily_rate','cars.car_registration_nbr','cars_types.body_type','cars_types.nbr_places','cars_types.nbr_doors','cars_types.fuel')
+    //     ->where('cars.id','=', $id)
+    //     ->get()
+    //     ->find($id);
+    //      return view('bookingpage',['singlecar' => $singlecarinfo]);
+         //dd($singlecarinfo);
+    // }
 }
 
 

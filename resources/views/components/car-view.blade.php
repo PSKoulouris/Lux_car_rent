@@ -1,7 +1,7 @@
 @if(isset($id))
-    <a href="/showbooking/{{$id}}">
+    <a href="/carDetails/{{$id}}">
  @endif
-<div class="w-[350px] h-[400px] flex flex-col justify-center items-center shadow-md bg-gray-100 mx-auto rounded-xl" >
+<div class="w-[350px] h-[400px] flex flex-col justify-center items-center shadow-md bg-gray-400 mx-auto rounded-xl" >
     <div class="rounded-xl w-[90%] mx-auto bg-gray-300 ">
           <!-- <img src="images/dark1.webp" alt="" class="object-cover  w-[150px] h-[150px]"> -->
           <!-- <div class="w-[240px] h-[150px] bg-cover">{{ $image }} </div> -->
@@ -9,8 +9,8 @@
     </div>
     <div class="flex flex-col">
         {{-- passing the arguments here for the car info/view --}}
-        <p class="bg-gray-200 w-[240px] font-bold text-center mt-1 rounded-xl">{{ $nameCar }}</p>
-        <p class="bg-gray-200 w-[200px]font-bold text-center mt-1 rounded-xl ">{{ $model }}</p>
+        <p class="bg-gray-400 w-[240px] font-bold text-center mt-1 rounded-xl">{{ $nameCar }}</p>
+        <p class="bg-gray-400 w-[200px]font-bold text-center mt-1 rounded-xl ">{{ $model }}</p>
         <div class="flex gap-4">
             <p class="bg-gray-200 w-[100px] font-bold text-center mt-1 rounded-xl">{{ $seat}}</p>
             <p class="bg-gray-200 w-[100px] font-bold text-center mt-1 rounded-xl">{{ $door}}</p>

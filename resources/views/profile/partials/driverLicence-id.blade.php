@@ -37,7 +37,7 @@
         </div>
 
         <div>
-        <label class= 'block font-medium text-sm text-gray-700' for="line1">Line 1:</label>
+        <label class= 'block font-medium text-sm text-gray-700' for="line1">:</label>
         <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" id="line1" name="line1" type="text" placeholder="Line1" required>
         </div>
 

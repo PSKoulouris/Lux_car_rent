@@ -13,12 +13,13 @@
                 </div>
              
             </div>
-            <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
-                {{-- try also to put the driver licence and id  --}}
+             {{-- try also to put the driver licence and id  --}}
+            {{-- <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+               
                 <div class="max-w-xl">
                     @include('profile.partials.driverLicence-id')
                 </div>
-            </div>
+            </div> --}}
             <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
                 <div class="max-w-xl">
                     @include('profile.partials.update-password-form')

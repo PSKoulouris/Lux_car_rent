@@ -84,12 +84,12 @@ class FilterController extends Controller
             }
 
              $listCars = $querySQL->get();
-             dd($listCars );
+            //  dd($listCars );
             // Log the retrieved cars for debugging
             Log::info($listCars);
 
             // Pass the list of cars to the view
-          return response()->json($listcars);
+            return response()->json($listcars);
         } catch (Exception $e) {
             Log::error('DB error '. $e->getMessage());
             return response()->json(['error' => 'Database'], 500);

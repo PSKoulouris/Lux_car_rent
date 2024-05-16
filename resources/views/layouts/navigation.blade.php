@@ -48,9 +48,9 @@
                             {{ __('My Bookings') }}
                         </x-dropdown-link>
 
-                        <x-dropdown-link :href="route('profile.feedback')">
+                        {{-- <x-dropdown-link :href="route('profile.feedback')">
                             {{ __('My FeedBack') }}
-                        </x-dropdown-link>
+                        </x-dropdown-link> --}}
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
