@@ -17,22 +17,22 @@
         </div>
 
         {{-- Driver Licence --}}
-        <div>
+        <div class="mt-4">
             <x-input-label for="driver_licence" :value="__('Insert a picture with the driver licence')" />
-            <x-driver-licence/>
+            <x-driver-licence class="block mt-2 w-full"/>
             <x-input-error :messages="$errors->get('driver_licence')" class="mt-2" />
         </div>
         {{-- Proof of ID --}}
-        <div>
+        <div class="mt-4">
             <x-input-label for="identification_data_proof" :value="__('ID proof')" />
-            <x-proof-id/>
+            <x-proof-id class="block mt-2 w-full"/>
             <x-input-error :messages="$errors->get('identification_data_proof')" class="mt-2" />
         </div>
 
         {{-- Address --}}
         <div class="mt-4">
             <x-input-label for="address" :value="__('Address')" />
-            <x-address id="adress" class="block mt-1 w-full"/>
+            <x-address id="address" class="block mt-2 w-full"/>
             {{-- <x-text-input id="adress" class="block mt-1 w-full" type="text" name="address" :value="old('address')"/> --}}
             <x-input-error :messages="$errors->get('address')" class="mt-2" />
         </div>

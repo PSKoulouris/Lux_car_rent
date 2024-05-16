@@ -12,7 +12,7 @@
                                         href="{{ url('/dashboard') }}"
                                         class="font-bold rounded-md px-8 py-2 text-white ring-1 ring-transparent transition hover:text-black/70 hover:underline underline-offset-8 decoration-4 decoration-orange-500  focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                                     >
-                                        Dashboard
+                                        Your Account
                                     </a>
                                 @else
                                     <a
