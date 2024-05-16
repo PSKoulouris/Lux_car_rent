@@ -1,6 +1,7 @@
 <x-mainlayout>
-    <x-nav-picture>
-</x-nav-picture>
+    <x-nav-link-us>
+</x-nav-link-us>
+
 @if(isset($singlecar))
 <x-car-details-view :id="$singlecar['id']"
 :image="$singlecar['image']" 

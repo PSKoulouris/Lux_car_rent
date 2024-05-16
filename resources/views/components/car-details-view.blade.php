@@ -1,21 +1,21 @@
 <div class="w-[80%] h-[100px] mx-auto shadow-md rounded-lg  flex bg-white mt-5 pt-4">
     <div class="w-[95%] flex flex-col border border-gray-400 mb-2 mx-auto" >
-        <div class="w-full h-[30px] bg-cyan-600 mx-auto pl-2 text-white text-1xl">Car Details page</div>
-         <div class="w-full h-[40px] bg-white mx-auto pl-2 flex items-center font-medium"> Explore our sleek and reliable {{$name}} designed to elevate your driving experience with modern features and exceptional comfort.</div>
+        <div class="w-full h-[30px] bg-cyan-600 mx-auto pl-2 text-white text-2xl">Car Details page</div>
+         <div class="w-full h-[40px] bg-white mx-auto pl-2 flex items-center  text-1xlfont-medium"> Explore our sleek and reliable {{$name}} designed to elevate your driving experience with modern features and exceptional comfort.</div>
     </div>
 </div>
 
 <div class="w-[80%] mx-auto border border-gray-200 bg-white rounded-sm mt-5 pt-4 flex  flex-col gap-4 p-4">
     <div class="w-[95%] flex flex-col border border-gray-400 mb-2 mx-auto">
-       <div class=" bg-cyan-600 text-white w-full flex items-center pl-2 font-bold text-1xl">
+       <div class=" bg-cyan-600 text-white w-full flex items-center pl-2 font-bold text-2xl">
             Car Details
        </div>
        {{-- "Unleash Your Journey. Rent the Experience." --}}
        <!-- {{-- car view inside booking page with all the details --}} -->
     
-       <div class="flex justify-between">
-          <div class="w-[500px]">
-            <img src="{{ asset($image) }}" alt="" class="bg-gray-200 bg-cover">
+       <div class="flex gap-8">
+          <div class="w-[500px] flex items-center justify-center ml-4 mt-5 mb-4">
+            <img src="{{ asset($image) }}" alt="" class="bg-gray-200">
           </div>
            <!-- starting div for content -->
             <!-- {{-- All the details inside the car-card for booking --}} -->
