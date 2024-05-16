@@ -15,7 +15,7 @@
                     </li>
                     <li> 
                         <a href="{{route('login')}}" class="hover: text-white hover:text-orange-500"> Login </a>
-                    </li>
+                    </li> <!-- linking functional social media-->
             </ul>
 
 </div>

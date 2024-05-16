@@ -38,7 +38,7 @@
                 <div class="flex items-center space-x-3"> 
                     <div>Ger:
                     </div>
-                        <div> 
+                        <div> <!-- linkl documents in rental agreement-->
                              <a href="{{ asset('files/Lux Rent Bedingungen.pdf') }}" download="Bedingungen" class="text-orange-500 hover:text-orange-300"> Bedingungen-pdf</a>
                         </div>
                 </div>  
