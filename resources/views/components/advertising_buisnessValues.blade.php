@@ -16,7 +16,7 @@
     <div class="relative overflow-hidden w-full h-screen">
         <div class="relative w-full h-full">
             <div class="carousel-item carousel-item-active">
-                <img src="./images/Luxembourg_car_1_169_notxt.jpg" alt="" class="w-full h-full object-cover">
+                <img src="./images/Luxembourg_car_1_169_notxt_mediumS.jpg" alt="" class="w-full h-full object-cover">
                 <div class="absolute top-1/4 left-1/12 text-white text-left text-3xl md:text-5xl">
                     <h1>
                         Drive with peace of mind<br />
@@ -27,7 +27,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="./images/Luxembourg_car_2_169_notxt.jpg" alt="" class="w-full h-full object-cover">
+                <img src="./images/Luxembourg_car_2_169_notxt_mediumS.jpg" alt="" class="w-full h-full object-cover">
                 <div class="absolute top-1/4 left-1/12 text-white text-left text-3xl md:text-5xl">
                     <h1>
                         Count on us for providing you<br />
@@ -38,7 +38,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="./images/Luxembourg_car_3_169_notxt.jpg" alt="" class="w-full h-full object-cover">
+                <img src="./images/Luxembourg_car_3_169_notxt_mediumS.jpg" alt="" class="w-full h-full object-cover">
                 <div class="absolute top-1/4 left-1/12 text-white text-left text-3xl md:text-5xl">
                     <h1>
                         Experience luxury and comfort<br />
@@ -49,7 +49,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="./images/Luxembourg_car_4_169_notxt.jpg" alt="" class="w-full h-full object-cover">
+                <img src="./images/Luxembourg_car_4_169_notxt_mediumS.jpg" alt="" class="w-full h-full object-cover">
                 <div class="absolute top-1/4 left-1/12 text-white text-left text-3xl md:text-5xl">
                     <h1>
                         Drive towards a greener future<br />
