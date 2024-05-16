@@ -30,6 +30,10 @@ Route::get('/carDetails/{id}', [CarsController::class, 'showCarDetails'])->name(
 // })->name('bookingdetails');
 
 Route::post('/bookingconform',[BookingController::class,'detailsofbooking'])->name('bookingdetails');
+//for the moment we have this 
+// Route::get('/Success', function(){
+//     return view('succes');
+// });
 
 Route::get('/', function () {
     return view('welcome');
