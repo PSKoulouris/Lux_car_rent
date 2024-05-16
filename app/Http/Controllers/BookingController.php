@@ -58,4 +58,8 @@ class BookingController extends Controller
     //     Log::info($users);
     //     return view('bookingpage', ['users' => $users]);
     // }
+
+    public function detailsofbooking(Request $request){
+        dd($request->all());
+    }
 }

@@ -7,12 +7,12 @@
 <div class="w-[80%] mx-auto shadow-md bg-white mt-5 pt-4 flex gap-8" >
   <div class="w-[25%] mx-auto mt-5 pt-4 rounded-lg" >
     {{-- form with a route for filterCarsByLocation  --}}
-    <form action="{{route('filterCars')}}" method="GET" class="border border-gray-200 flex flex-col gap-4 mx-auto p-2 rounded-lg">
+    <form action="{{route('filterCars')}}" method="GET" class="border border-gray-500 flex flex-col gap-4 mx-auto p-2 rounded-lg">
       @csrf
-      <div class="border-b border-gray-200 text-2xl font-bold">Filter</div>
+      <div class="border-b border-gray-500 text-2xl font-bold">Filter</div>
       {{-- filterCarsByLocation --}}
       {{-- Flavian, I change the input name="location" --}}
-      <div class="border-b border-gray-200 p-2 ">
+      <div class="border-b border-gray-500 p-2 ">
         <p class="font-bold text-1xl">Select your Location</p>
         <input type="checkbox" id="clervaux" name="location[]" value="Clervaux">
         <label for="clervaux">Clervaux</label><br>
@@ -27,7 +27,7 @@
       </div>
       <!-- code for selcting the car type -->
       {{-- filterCarsByFuel --}}
-      <div class="border-b border-gray-200 p-2">
+      <div class="border-b border-gray-500 p-2">
         <p class="font-bold text-1xl">Fuels</p>
         <input type="checkbox" id="petrol" name="fuel[]" value="Petrol">
         <label for="petrol">Petrol</label><br>
@@ -41,7 +41,7 @@
         <label for="hydrogen">Hydrogen</label><br>
       </div>
       <!-- code for selcting the car model -->
-      <div class="border-b border-gray-200 p-2">
+      <div class="border-b border-gray-500 p-2">
         <p class="font-bold text-1xl">Car-Model</p>
         <input type="checkbox" id="bmw" name="name[]" value="BMW">
         <label for="bmw">BMW</label><br>
@@ -55,7 +55,7 @@
         <label for="ford">Ford</label><br>
       </div>
       <!-- code for car typeswith seats -->
-      <div class="border-b border-gray-200 p-2">
+      <div class="border-b border-gray-500 p-2">
         <p class="font-bold text-1xl">Car-Seats</p>
         <input type="checkbox"  id="4seats" name="4seats" value="4">
         <label for="4seats">4-seats</label><br>
@@ -63,7 +63,7 @@
         <label for="6-seats">6-seats</label><br>
       </div>
       <div>
-        <button type="submit" class="border bg-gray-400 w-full rounded-xl">Apply filtred</button>
+        <button type="submit" class="border bg-gray-500 w-full rounded-xl">Apply filtred</button>
       </div>
     </form>
   </div>

@@ -24,6 +24,12 @@ Route::get('/showCars', [CarsController::class, 'showCars'])->name('showcars');
 //  Route::get('/showbooking/{id}', [CarsController::class, 'showBookingCard'])->name('search');
 Route::get('/carDetails/{id}', [CarsController::class, 'showCarDetails'])->name('search');
 
+// just for friday purpose
+// Route::post('/bookingconform',function(){
+//     echo "working";
+// })->name('bookingdetails');
+
+Route::post('/bookingconform',[BookingController::class,'detailsofbooking'])->name('bookingdetails');
 
 Route::get('/', function () {
     return view('welcome');
