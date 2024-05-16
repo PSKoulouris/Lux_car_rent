@@ -9,14 +9,14 @@
     </div>
     <div class="flex flex-col">
         {{-- passing the arguments here for the car info/view --}}
-        <p class="bg-gray-400 w-[240px] font-bold text-center mt-1 rounded-xl">{{ $nameCar }}</p>
-        <p class="bg-gray-400 w-[200px]font-bold text-center mt-1 rounded-xl ">{{ $model }}</p>
-        <div class="flex gap-4">
-            <p class="bg-gray-200 w-[100px] font-bold text-center mt-1 rounded-xl">{{ $seat}}</p>
-            <p class="bg-gray-200 w-[100px] font-bold text-center mt-1 rounded-xl">{{ $door}}</p>
+        <p class="bg-gray-200 w-[250px] font-bold text-center mt-1 rounded-lg">{{ $nameCar }}</p>
+        <p class="bg-gray-200 w-[250px]font-bold text-center mt-1 rounded-lg">{{ $model }}</p>
+        <div class="flex gap-4 w-[250px]">
+            <p class="bg-gray-200 w-[125px] font-bold text-center mt-1 rounded-lg">{{ $seat}}</p>
+            <p class="bg-gray-200 w-[125px] font-bold text-center mt-1 rounded-lg">{{ $door}}</p>
         </div>  
         <div class="flex justify-end">
-            <p class="font-medium bg-gray-200 w-[250px] text-center mt-1 rounded-xl">Best price for a week <span class="font-bold">&#8364;{{ $price }}</span> </p>
+            <p class="font-medium bg-gray-200 w-[250px] text-center mt-1 rounded-lg">Best price for a week <span class="font-bold">&#8364;{{ $price }}</span> </p>
         </div>   
     </div>
 </div>
