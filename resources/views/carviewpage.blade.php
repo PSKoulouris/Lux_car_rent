@@ -42,25 +42,28 @@
       </div>
       <!-- code for selcting the car model -->
       <div class="border-b border-gray-500 p-2">
-        <p class="font-bold text-1xl">Car-Model</p>
-        <input type="checkbox" id="bmw" name="name[]" value="BMW">
-        <label for="bmw">BMW</label><br>
-        <input type="checkbox"id="volkswagen" name="name[]" value="Volkswagen">
-        <label for="volkswagen">volkswagen</label><br>
-        <input type="checkbox" id="fiat" name="name[]" value="Fiat">
-        <label for="fiat">Fiat</label><br>
-        <input type="checkbox" id="renault" name="name[]" value="Renault">
-        <label for="renault">Renault</label><br>
-        <input type="checkbox" id="ford" name="name[]" value="Ford">
-        <label for="ford">Ford</label><br>
+        <p class="font-bold text-1xl">Brands</p>
+        <input type="checkbox" id="bugatti" name="name[]" value="BMW">
+        <label for="bugatti">Bugatti</label><br>
+        <input type="checkbox"id="audi" name="name[]" value="Volkswagen">
+        <label for="audi">Audi</label><br>
+        <input type="checkbox" id="mercedesbenz" name="name[]" value="Fiat">
+        <label for="mercedesbenz">Mercedes-Benz
+        </label><br>
+        <input type="checkbox" id="honda" name="name[]" value="Renault">
+        <label for="honda">Honda</label><br>
+        <input type="checkbox" id="toyota" name="name[]" value="Ford">
+        <label for="toyota">Toyota</label><br>
       </div>
       <!-- code for car typeswith seats -->
       <div class="border-b border-gray-500 p-2">
-        <p class="font-bold text-1xl">Car-Seats</p>
+        <p class="font-bold text-1xl">Car Seats</p>
+        <input type="checkbox"  id="4seats" name="2seats" value="4">
+        <label for="4seats">2-seats</label><br>
         <input type="checkbox"  id="4seats" name="4seats" value="4">
         <label for="4seats">4-seats</label><br>
-        <input type="checkbox" id="6seats" name="6seats" value="6">
-        <label for="6-seats">6-seats</label><br>
+        <input type="checkbox" id="6seats" name="5seats" value="6">
+        <label for="5-seats">5-seats</label><br>
       </div>
       <div>
         <button type="submit" class="border bg-gray-500 w-full rounded-xl">Apply filtred</button>
