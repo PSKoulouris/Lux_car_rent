@@ -20,9 +20,11 @@
         <label for="diekirch">Diekirch</label><br>
         <input type="checkbox" id="luxembourg" name="location[]" value="Luxembourg">
         <label for="luxembourg">Luxembourg</label><br>
-        <input type="checkbox" id="esch-sur-alzette" name="location[]" value="Esch-sur-alzette">
+        <input type="checkbox" id="esch-sur-alzette" name="location[]" value="Esch-sur-Alzette">
         <label for="esch-sur-alzette">Esch-Sur-Alzette</label><br>
-        <input type="checkbox" id="lux-airport"name="location[]" value="lux-airport">
+        <input type="checkbox" id="lux-airport"name="location[]" value="	
+        Luxembourg-Airport
+        ">
         <label for="lux-airport">Luxembourg-Airport</label><br>
       </div>
       <!-- code for selcting the car type -->
@@ -43,30 +45,30 @@
       <!-- code for selcting the car model -->
       <div class="border-b border-gray-500 p-2">
         <p class="font-bold text-1xl">Brands</p>
-        <input type="checkbox" id="bugatti" name="name[]" value="BMW">
+        <input type="checkbox" id="bugatti" name="name[]" value="Bugatti">
         <label for="bugatti">Bugatti</label><br>
-        <input type="checkbox"id="audi" name="name[]" value="Volkswagen">
+        <input type="checkbox"id="audi" name="name[]" value="Audi">
         <label for="audi">Audi</label><br>
-        <input type="checkbox" id="mercedesbenz" name="name[]" value="Fiat">
+        <input type="checkbox" id="mercedesbenz" name="name[]" value="Mercedes-Benz">
         <label for="mercedesbenz">Mercedes-Benz
         </label><br>
-        <input type="checkbox" id="honda" name="name[]" value="Renault">
+        <input type="checkbox" id="honda" name="name[]" value="Honda">
         <label for="honda">Honda</label><br>
-        <input type="checkbox" id="toyota" name="name[]" value="Ford">
+        <input type="checkbox" id="toyota" name="name[]" value="Toyota">
         <label for="toyota">Toyota</label><br>
       </div>
       <!-- code for car typeswith seats -->
       <div class="border-b border-gray-500 p-2">
         <p class="font-bold text-1xl">Car Seats</p>
-        <input type="checkbox"  id="4seats" name="2seats" value="4">
-        <label for="4seats">2-seats</label><br>
-        <input type="checkbox"  id="4seats" name="4seats" value="4">
-        <label for="4seats">4-seats</label><br>
-        <input type="checkbox" id="6seats" name="5seats" value="6">
-        <label for="5-seats">5-seats</label><br>
+        <input type="checkbox"  id="2seats" name="seats[]" value="2">
+        <label for="2seats">2 seats</label><br>
+        <input type="checkbox"  id="4seats" name="seats[]" value="4">
+        <label for="4seats">4 seats</label><br>
+        <input type="checkbox" id="5seats" name="seats[]" value="5">
+        <label for="5-seats">5 seats</label><br>
       </div>
       <div>
-        <button type="submit" class="border bg-gray-500 w-full rounded-xl">Apply filtred</button>
+        <button type="submit" class="border bg-gray-500 w-full rounded-xl">Apply filter</button>
       </div>
     </form>
   </div>
