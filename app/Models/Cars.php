@@ -13,4 +13,5 @@ class Cars extends Model
     public function carsType(){
         return $this->belongsToMany(Cars_type::class);
     }
+   
 }

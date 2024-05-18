@@ -58,20 +58,6 @@
             </div>
             <button type="submit" class="w-full border bg-gray-300 font-bold text-1xl rounded-xl p-2" id="bookingpage">Confirm Booking</button>
     </form>
-   
-        {{-- @if(Session::has('message'))
-            <p class="text-red alert alert-info">{{ Session::get('message') }}</p>
-        @endif 
-        @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-        @endif
-        @if(session('error'))
-            <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif--}}
     </div>
     </div>
     </div>
