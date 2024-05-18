@@ -25,7 +25,7 @@ class BookingController extends Controller
             // $newBooking->user_id = $request->user_id;
             // $newBooking->car_id = $request->car_id;
             //fetch the user's id 
-            $newBooking->user_id = Auth::user();
+            $newBooking->user_id = Auth::id();
             // fetch cars id
             $existingCar = Cars::first();
             if ($existingCar) {
@@ -35,7 +35,7 @@ class BookingController extends Controller
             }
             $newBooking->save();
             DB::commit();
-            return redirect('/bookingconform')->with('success', 'Thank you for your choise!');
+            return redirect('/mybooking');
             // ->with('message', 'Thanks for booking!')
         } catch (Exception $e) {
             DB::rollBack();

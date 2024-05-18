@@ -30,12 +30,12 @@
             <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="text" name="email" id="email" value="{{ $users->email}}">
             </div>
             <div>
-            <label class= 'block font-medium text-1xl text-gray-700' for="start-date">Startdate</label>
-            <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="date" min="5/16/2024" name="startdate" id="start-date"  required>
+                <label class= 'block font-medium text-1xl text-gray-700' for="startdate">Start date</label>
+                <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="date" min="5/16/2024" name="startdate" id="startdate"  required>    
             </div>
             <div>
-            <label class= 'block font-medium text-1xl text-gray-700' for="end-date">End date</label>
-            <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="date" min="5/16/2024" name="enddate" id="end-date"  required>
+                <label class= 'block font-medium text-1xl text-gray-700' for="enddate">End date</label>
+                <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="date" min="5/16/2024" name="enddate" id="enddate"  required>    
             </div>
             <div>
             <label class= 'block font-medium text-1xl text-gray-700' for="carname">car name</label>
