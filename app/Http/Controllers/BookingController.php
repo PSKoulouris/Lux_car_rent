@@ -4,14 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 use App\Models\Cars;
-use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-
-use function PHPUnit\Framework\returnSelf;
 
 class BookingController extends Controller
 {
@@ -26,15 +23,18 @@ class BookingController extends Controller
             // $newBooking->car_id = $request->car_id;
             //fetch the user's id 
             $newBooking->user_id = Auth::id();
+            // fixed, checked with dd()
             // fetch cars id
-            $existingCar = Cars::first();
+            $existingCarId = $request->input('car_id');
+            $existingCar = Cars::find($existingCarId);
             if ($existingCar) {
-               $newBooking->car_id =  $existingCar->id;
+               $newBooking->car_id = $existingCar->id;
             } else {
                 return back()->with('error', 'No cars available for booking at the moment.');
             }
             $newBooking->save();
             DB::commit();
+            // dd($newBooking);
             return redirect('/mybooking');
             // ->with('message', 'Thanks for booking!')
         } catch (Exception $e) {
@@ -43,5 +43,15 @@ class BookingController extends Controller
             return back()->withError("Error creating BOOKING!!!");
         }
         // dd($request->all());
+    }
+
+    public function showHistoryBookings(){
+        $userID = auth()->id();
+        $listBookings = Cars::join('bookings', 'bookings.car_id', '=', 'cars.id')
+        ->select('bookings.start_date', 'bookings.return_date', 'bookings.amount', 'cars.image','cars.name', 'cars.model', 'cars.car_registration_nbr')
+        ->where('bookings.user_id', '=', $userID)
+        ->get();
+        
+        return view('profile/mybooking', ['listBookings'=> $listBookings]);
     }
 }

@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Booking extends Model
 {
     use HasFactory;
+    public function booking(){
+        return $this->belongsTo(Cars::class);
+    }
 }
