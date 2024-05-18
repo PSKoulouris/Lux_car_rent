@@ -11,25 +11,37 @@ class FilterController extends Controller
 {
     public function showFilterCars(Request $request) {
         try {
-            //i'm not sure that it's working
-            // try to retrieve the data!?
             //join all the tables cars, cars_types, link_tables and availabilities, beacause location is inside availabilities
             $querySQL = Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')
             ->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')
             ->leftJoin('availabilities', 'availabilities.car_id', '=', 'cars.id')
             ->select('cars.id','cars.image','cars.name','cars.model','cars.year', 'cars.weekly_rate', 'cars.daily_rate','cars.car_registration_nbr','cars_types.body_type','cars_types.nbr_places','cars_types.nbr_doors','cars_types.fuel', 'availabilities.location');
             // Log::info('Generate SQL Query: '. $querySQL->toSql());
-            // Filter by location !?
-          // dd($request->all());
-            //dd($querySQL);
+            // dd($request->all());
+             //dd($querySQL);
+
+            // Filter by location 
             if ($request->has('location')) {
                 $location = $request->input('location'); // name of the input
                 $querySQL->whereIn('availabilities.location', $location);
             }
+
             // filter BY fuel !!!
             if($request->has('fuel')){
                 $fuel = $request->input('fuel');
                 $querySQL->whereIn('cars_types.fuel', $fuel);
+            }
+
+            // filter BY name Cars !!!
+            if($request->has('name')){
+                $name = $request->input('name');
+                $querySQL->whereIn('cars.name', $name);
+            }
+
+            // filter BY seats Cars_types !!!
+            if($request->has('seats')){
+                $seats = $request->input('seats');
+                $querySQL->whereIn('cars_types.nbr_places', $seats);
             }
 
              $listCars = $querySQL->get();
@@ -44,22 +56,6 @@ class FilterController extends Controller
             return response()->json(['error' => 'Database'], 500);
         }
     }
-
-    // public function showFilterCarsByFuel (Request $request){
-    //     $querySQL = Cars::join('link_cars_types', 'link_cars_types.car_id', '=', 'cars.id')
-    //     ->join('cars_types', 'link_cars_types.car_type_id', '=', 'cars_types.id')
-    //     ->select('cars.id','cars.image','cars.name','cars.model','cars.year', 'cars.weekly_rate', 'cars.daily_rate','cars.car_registration_nbr','cars_types.body_type','cars_types.nbr_places','cars_types.nbr_doors','cars_types.fuel')
-    //     ->distinct();
-
-    //     if($request->has('fuel')){
-    //         $fuel = $request->input('fuel');
-    //         $querySQL->where('cars_types.fuel',$fuel);
-    //     }
-    //     $listCars = $querySQL->get();
-    //     // Log::info($listCars);
-    //     return view('carviewpage', ['listCars' => $listCars]);
-    // }
-
     public function showFilterapiCars(Request $request) {
         try {
             //i'm not sure that it's working

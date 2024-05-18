@@ -73,7 +73,7 @@ Route::middleware('auth')->group(function () {
     // route Booking page
     Route::get('/booking/{id}',[CarsController::class, 'showBookingDetails']);
 
-    Route::get('/showUserDetails', [BookingController::class, 'showUserDetails'])->name('show.userDetails');
+    // Route::get('/showUserDetails', [BookingController::class, 'showUserDetails'])->name('show.userDetails');
     
     // Profile/ Mybookings history
     Route::get('/mybooking', [BookingController::class, 'showHistoryBookings'])->name('profile.booking');
