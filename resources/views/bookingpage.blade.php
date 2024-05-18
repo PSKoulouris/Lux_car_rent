@@ -13,7 +13,7 @@
     </div>
 
     <div class="w-[95%] flex flex-col border border-gray-200 mb-2 mx-auto p-4">
-        <form action="{{ route('bookingdetails') }}" method="post" class="mt-6  space-y-6">
+        <form action="{{ route('bookingdetails') }}" method="post" class="mt-6  space-y-6" id="bookingform">
             @csrf
             <input type="text" value="{{$users->id}}" id="user_id" name="user_id" hidden>
             <input type="text" value="{{$singlecar->id}}" id="car_id" name="car_id" hidden>
@@ -38,16 +38,23 @@
                 <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="date" min="5/16/2024" name="enddate" id="enddate"  required>    
             </div>
             <div>
-            <label class= 'block font-medium text-1xl text-gray-700' for="carname">car name</label>
-            <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="text"  name="carname" id="carname" value="{{ $singlecar->name }}" >
+            <!-- <label class= 'block font-medium text-1xl text-gray-700' for="carname">car name</label> -->
+            <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="text"  name="carname" id="carname" value="{{ $singlecar->name }}" hidden>
             </div>
             <div>
-            <label class= 'block font-medium text-1xl text-gray-700' for="carregno">Car registration number</label>
-            <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="text" name="carregno" id="carregno" value="{{ $singlecar->car_registration_nbr }}">
+            <!-- <label class= 'block font-medium text-1xl text-gray-700' for="carregno">Car registration number</label> -->
+            <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="text" name="carregno" id="carregno" value="{{ $singlecar->car_registration_nbr }}" hidden>
             </div>
             <div>
-            <label class= 'block font-medium text-1xl text-gray-700' for="amount">weekly Rate</label>
-            <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="text"  name="amount" id="amount" value="{{ $singlecar->weekly_rate }}" >
+            <!-- <label class= 'block font-medium text-1xl text-gray-700' for="dailyrate">DailyRate</label> -->
+            <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="text"  name="dailyrate" id="dailyrate" value="{{ $singlecar->daily_rate }}" hidden >
+            </div>
+             <a href="#" id="quote" class="text-sky-700 underline">click to see your quote</a>
+             <p>Amount</p>
+             <p id="output"></p>
+            <div>
+            <!-- <label class= 'block font-medium text-1xl text-gray-700' for="amount">Amount</label> -->
+            <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm mt-1 block w-full" type="text"  name="amount" id="amount" value="" hidden >
             </div>
             <button type="submit" class="w-full border bg-gray-300 font-bold text-1xl rounded-xl p-2" id="bookingpage">Confirm Booking</button>
     </form>
