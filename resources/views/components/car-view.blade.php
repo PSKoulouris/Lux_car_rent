@@ -12,11 +12,11 @@
         <p class=" w-[300px] font-bold text-center mt-1 rounded-lg text-2xl text-orange-500">{{ $nameCar }}</p>
         <p class="bg-gray-200 w-[300px]font-bold text-center mt-1 rounded-lg">{{ $model }}</p>
         <div class="flex gap-4 w-[300px]">
-            <p class="bg-gray-200 w-[150px] font-bold text-center mt-1 rounded-lg ">{{ $seat}} Seats</p>
+            <p class="bg-gray-200 w-[150px] font-bold text-center mt-1 rounded-lg ">{{ $seat}} Places</p>
             <p class="bg-gray-200 w-[150px] font-bold text-center mt-1 rounded-lg ">{{ $door}} Doors</p>
         </div>  
         <div class="flex justify-end">
-            <p class="font-medium bg-gray-200 w-[300px] text-center mt-1 rounded-lg">Best price for a week <span class="font-bold">&#8364;{{ $price }}</span> </p>
+            <p class="font-medium bg-gray-200 w-[300px] text-center mt-1 rounded-lg">Price per day: <span class="font-bold">{{ $price }}&#8364;</span> </p>
         </div>   
     </div>
 </div>

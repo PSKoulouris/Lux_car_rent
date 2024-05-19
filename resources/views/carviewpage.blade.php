@@ -59,13 +59,13 @@
       </div>
       <!-- code for car typeswith seats -->
       <div class="border-b border-gray-500 p-2">
-        <p class="font-bold text-1xl">Car Seats</p>
+        <p class="font-bold text-1xl">Car Places</p>
         <input type="checkbox"  id="2seats" name="seats[]" value="2">
-        <label for="2seats">2 seats</label><br>
+        <label for="2seats"> 2 places</label><br>
         <input type="checkbox"  id="4seats" name="seats[]" value="4">
-        <label for="4seats">4 seats</label><br>
+        <label for="4seats"> 4 places</label><br>
         <input type="checkbox" id="5seats" name="seats[]" value="5">
-        <label for="5-seats">5 seats</label><br>
+        <label for="5-seats"> 5 places</label><br>
       </div>
       <div>
         <button type="submit" class="border bg-gray-500 w-full rounded-xl">Apply filter</button>
@@ -74,7 +74,7 @@
   </div>
   <div class="w-[70%] mx-auto rounded-lg flex flex-wrap gap-4 bg-white mt-5 pt-4">
     @foreach ($listCars as $car)
-      <x-car-view :image="$car['image']" :nameCar="$car['name']" :model="$car['model']" :seat="$car['nbr_places']" :door="$car['nbr_doors']" :price="$car['weekly_rate']" :id="$car['id']"/>
+      <x-car-view :image="$car['image']" :nameCar="$car['name']" :model="$car['model']" :seat="$car['nbr_places']" :door="$car['nbr_doors']" :price="$car['daily_rate']" :id="$car['id']"/>
     @endforeach
   </div>
 </div>
