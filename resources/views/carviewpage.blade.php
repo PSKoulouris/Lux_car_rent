@@ -47,13 +47,21 @@
         <p class="font-bold text-1xl">Brands</p>
         <input type="checkbox" id="bugatti" name="name[]" value="Bugatti">
         <label for="bugatti">Bugatti</label><br>
-        <input type="checkbox"id="audi" name="name[]" value="Audi">
-        <label for="audi">Audi</label><br>
+        <input type="checkbox"id="bmw" name="name[]" value="BMW">
+        <label for="bmw">BMW</label><br>
+        <input type="checkbox"id="chevrolet" name="name[]" value="Chevrolet">
+        <label for="chevrolet">Chevrolet</label><br>
+        <input type="checkbox"id="ford" name="name[]" value="Ford">
+        <label for="ford">Ford</label><br>
+        <input type="checkbox" id="honda" name="name[]" value="Honda">
+        <label for="honda">Honda</label><br>
+        <input type="checkbox" id="hyundai" name="name[]" value="Hyundai">
+        <label for="hyundai">Hyundai</label><br>
         <input type="checkbox" id="mercedesbenz" name="name[]" value="Mercedes-Benz">
         <label for="mercedesbenz">Mercedes-Benz
         </label><br>
-        <input type="checkbox" id="honda" name="name[]" value="Honda">
-        <label for="honda">Honda</label><br>
+        <input type="checkbox" id="tesla" name="name[]" value="Tesla">
+        <label for="tesla">Tesla</label><br>
         <input type="checkbox" id="toyota" name="name[]" value="Toyota">
         <label for="toyota">Toyota</label><br>
       </div>
