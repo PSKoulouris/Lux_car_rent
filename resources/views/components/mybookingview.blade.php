@@ -1,5 +1,5 @@
 <div class="w-[90%] mx-auto shadow-md rounded-lg  flex  bg-white mt-5 pt-4">
-    <div class="w-[95%} mx-auto pt-4 border border-gray-100">
+    <div class="w-[95%} mx-auto  gap-4 p-4border border-gray-100">
         <div class="flex flex-col">
             <p class="font-bold text-2xl">Booking Details</p>
             <p>Start date: {{ $startdate }}</p>

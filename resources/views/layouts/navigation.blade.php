@@ -22,6 +22,12 @@
                         {{ __('Home') }}
                     </x-nav-link>
                 </div>
+
+                <div class="space-x-8 text-white sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('showcars')" :active="request()->routeIs('dashboard')">
+                        {{ __('Cars') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
