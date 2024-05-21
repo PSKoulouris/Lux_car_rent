@@ -8,8 +8,8 @@
 
     <!-- <div class="flex-col mt-8 p-4 mx-auto bg-white shadow-md w-[70%] gap-4 rounded-lg"> -->
     <div class="text-black p-10 font-arial bg-gray-100 flex flex-col mt-8 mb-8 p-4 mx-auto bg-white shadow-md w-[70%] gap-4 rounded-lg">
-        <div class="flex flex-col mt-8 p-4 mx-auto bg-white shadow-md">   
-            <h1 class="text-5xl text-orange-500"><strong> Rental Agreement </strong></h1><br>
+        <div class="flex flex-col mt-8 p-4 mx-auto shadow-md">   
+            <h1 class="text-5xl text-center text-orange-500 mt-3"><strong> Rental Agreement </strong></h1><br>
         </div>
             <br>
                 <div class=" text-lg p-5">
