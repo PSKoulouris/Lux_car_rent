@@ -10,14 +10,14 @@
                 <div class="p-6 text-gray-900">
                     @if(!empty($listBookings))
                         @foreach ($listBookings as $booking)
-                        
-                                <x-mybookingview :startdate="$booking['start_date']"
+                                <x-mybookingview 
+                                :startdate="$booking['start_date']"
                                 :enddate="$booking['return_date']" 
                                 :price="$booking['amount']" 
                                 :image="$booking['image']"
                                 :name="$booking['name']" 
                                 :model="$booking['model']"
-                                :regno="$booking['car_registration_nbr']" ></x-mybookingview>
+                                :regno="$booking['car_registration_nbr']" />
                         @endforeach
                     @else
                    You didn't book yet!...
